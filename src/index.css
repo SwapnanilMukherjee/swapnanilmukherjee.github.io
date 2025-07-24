@@ -2,34 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Academic Portfolio Design System - Professional & Clean */
+/* Simple Academic Design System - Student Portfolio */
 
 @layer base {
   :root {
-    /* Academic color palette - professional blues and grays */
+    /* Simple, clean academic colors */
     --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --foreground: 212 13% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 212 13% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 212 13% 23%;
 
-    /* Primary academic blue - trustworthy and professional */
-    --primary: 214 84% 56%;
+    /* Subtle blue for links and accents */
+    --primary: 212 89% 48%;
     --primary-foreground: 0 0% 100%;
-    --primary-muted: 214 50% 85%;
 
-    /* Subtle grays for secondary content */
-    --secondary: 210 17% 95%;
-    --secondary-foreground: 215 25% 27%;
+    /* Light grays for backgrounds */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 212 13% 23%;
 
-    --muted: 210 17% 95%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 212 13% 57%;
 
-    /* Accent for highlights and links */
-    --accent: 214 84% 56%;
+    --accent: 212 89% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -103,50 +101,17 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
 
-  /* Academic typography */
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold text-foreground;
-  }
+  /* Simple typography */
+  h1 { @apply text-2xl font-semibold; }
+  h2 { @apply text-xl font-semibold; }
+  h3 { @apply text-lg font-medium; }
 
-  h1 {
-    @apply text-3xl md:text-4xl;
-  }
-
-  h2 {
-    @apply text-2xl md:text-3xl;
-  }
-
-  h3 {
-    @apply text-xl md:text-2xl;
-  }
-
-  /* Academic links styling */
+  /* Simple link styling */
   .academic-link {
-    @apply text-primary hover:text-primary/80 underline transition-colors duration-200;
-  }
-
-  /* Publication entry styling */
-  .publication-entry {
-    @apply border-l-4 border-primary/20 pl-4 py-2;
-  }
-
-  /* Custom scrollbar for modern look */
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-muted;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/30 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/50;
+    @apply text-primary hover:underline;
   }
 }
