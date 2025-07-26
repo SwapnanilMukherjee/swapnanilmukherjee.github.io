@@ -16,18 +16,18 @@
     --popover: 0 0% 100%;
     --popover-foreground: 212 13% 23%;
 
-    /* Subtle blue for links and accents */
+    /* Subtle blue for minor accents only */
     --primary: 212 89% 48%;
     --primary-foreground: 0 0% 100%;
 
     /* Light grays for backgrounds */
     --secondary: 210 40% 96%;
-    --secondary-foreground: 212 13% 23%;
+    --secondary-foreground: 212 13% 15%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 212 13% 57%;
+    --muted-foreground: 212 13% 40%;
 
-    --accent: 212 89% 48%;
+    --accent: 212 13% 15%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -112,6 +112,6 @@
 
   /* Simple link styling */
   .academic-link {
-    @apply text-primary hover:underline;
+    @apply text-accent hover:text-primary hover:underline;
   }
 }

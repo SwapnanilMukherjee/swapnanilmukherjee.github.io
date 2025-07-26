@@ -1,6 +1,6 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, ExternalLink, FileText } from "lucide-react";
+import { Mail, Github, Linkedin, Twitter, FileText, GraduationCap } from "lucide-react";
 import profileImage from "@/assets/profile-image.jpg";
 
 export const HomePage = () => {
@@ -19,20 +19,32 @@ export const HomePage = () => {
           <p className="text-sm text-muted-foreground mb-3">your.email@university.edu</p>
           
           {/* Social Links */}
-          <div className="flex items-center gap-3">
-            <Button variant="ghost" size="sm" asChild>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </Button>
+          <div className="flex items-center gap-1">
             <Button variant="ghost" size="sm" asChild>
               <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4" />
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
+              <a href="https://scholar.google.com/citations?user=yourid" target="_blank" rel="noopener noreferrer">
+                <GraduationCap className="w-4 h-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
               <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-4 h-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <Twitter className="w-4 h-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://bsky.app/profile/yourusername.bsky.social" target="_blank" rel="noopener noreferrer">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.5c-5.5 0-10 4.5-10 10v6c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-6c0-5.5-4.5-10-10-10zm-2 13.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm4 0c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                </svg>
               </a>
             </Button>
             <Button variant="ghost" size="sm" asChild>
@@ -82,7 +94,7 @@ export const HomePage = () => {
       <section className="mb-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold">Recent Research</h2>
-          <a href="/research" className="text-sm text-primary hover:underline">
+          <a href="/research" className="text-sm text-accent hover:text-primary hover:underline">
             View all →
           </a>
         </div>
@@ -106,10 +118,10 @@ export const HomePage = () => {
                 Conference/Journal Name, 2024
               </p>
               <div className="flex gap-3 text-xs">
-                <a href="#" className="text-primary hover:underline">Abstract</a>
-                <a href="#" className="text-primary hover:underline">PDF</a>
-                <a href="#" className="text-primary hover:underline">Code</a>
-                <a href="#" className="text-primary hover:underline">BibTeX</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">Abstract</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">PDF</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">Code</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">BibTeX</a>
               </div>
             </div>
           </div>
@@ -132,9 +144,9 @@ export const HomePage = () => {
                 Workshop/Conference Name, 2024
               </p>
               <div className="flex gap-3 text-xs">
-                <a href="#" className="text-primary hover:underline">Abstract</a>
-                <a href="#" className="text-primary hover:underline">PDF</a>
-                <a href="#" className="text-primary hover:underline">BibTeX</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">Abstract</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">PDF</a>
+                <a href="#" className="text-accent hover:text-primary hover:underline">BibTeX</a>
               </div>
             </div>
           </div>
@@ -145,7 +157,7 @@ export const HomePage = () => {
       <section>
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-semibold">Recent News</h2>
-          <a href="/blog" className="text-sm text-primary hover:underline">
+          <a href="/blog" className="text-sm text-accent hover:text-primary hover:underline">
             View all →
           </a>
         </div>

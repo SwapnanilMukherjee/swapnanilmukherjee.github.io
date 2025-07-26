@@ -16,13 +16,33 @@ export const ResearchPage = () => {
           </p>
         </section>
 
+        {/* Ongoing Projects */}
+        <section>
+          <h2 className="text-lg font-medium mb-4">Ongoing Projects</h2>
+          <div className="space-y-4 mb-8">
+            <div>
+              <h4 className="font-medium mb-2">Current Project Title</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Brief description of what you're currently working on. Expected completion timeline 
+                and potential impact.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-medium mb-2">Collaborative Research</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Description of collaborative work with other researchers or institutions.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Publications by Year */}
         <section>
           <h2 className="text-lg font-medium mb-6">Publications</h2>
           
           {/* 2024 */}
           <div className="mb-8">
-            <h3 className="text-md font-medium mb-4 text-primary">2024</h3>
+            <h3 className="text-md font-medium mb-4 text-accent">2024</h3>
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="w-20 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
@@ -35,7 +55,7 @@ export const ResearchPage = () => {
                   <p className="text-sm text-muted-foreground mb-2">
                     <strong>Your Name</strong>, Co-Author One, Co-Author Two, Senior Author
                   </p>
-                  <p className="text-sm text-primary mb-3">
+                  <p className="text-sm text-accent mb-3">
                     Conference on [Area] (Top-tier venue), 2024
                   </p>
                   <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
@@ -43,19 +63,19 @@ export const ResearchPage = () => {
                     What was novel about your approach? What were the key results?
                   </p>
                   <div className="flex gap-4 text-sm">
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       Abstract
                     </a>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       PDF
                     </a>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <ExternalLink className="w-3 h-3" />
                       Code
                     </a>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       BibTeX
                     </a>
@@ -74,7 +94,7 @@ export const ResearchPage = () => {
                   <p className="text-sm text-muted-foreground mb-2">
                     <strong>Your Name</strong>, Advisor Name, Collaborator
                   </p>
-                  <p className="text-sm text-primary mb-3">
+                  <p className="text-sm text-accent mb-3">
                     Workshop at [Major Conference], 2024
                   </p>
                   <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
@@ -82,15 +102,15 @@ export const ResearchPage = () => {
                     What methodology did you use? What insights did you gain?
                   </p>
                   <div className="flex gap-4 text-sm">
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       Abstract
                     </a>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       PDF
                     </a>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       BibTeX
                     </a>
@@ -102,7 +122,7 @@ export const ResearchPage = () => {
 
           {/* 2023 */}
           <div className="mb-8">
-            <h3 className="text-md font-medium mb-4 text-primary">2023</h3>
+            <h3 className="text-md font-medium mb-4 text-accent">2023</h3>
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="w-20 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
@@ -115,18 +135,18 @@ export const ResearchPage = () => {
                   <p className="text-sm text-muted-foreground mb-2">
                     <strong>Your Name</strong>, Other Authors
                   </p>
-                  <p className="text-sm text-primary mb-3">
+                  <p className="text-sm text-accent mb-3">
                     [Journal/Conference Name], 2023
                   </p>
                   <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
                     Description of earlier work that led to your current research interests.
                   </p>
                   <div className="flex gap-4 text-sm">
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       PDF
                     </a>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1">
+                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
                       <FileText className="w-3 h-3" />
                       BibTeX
                     </a>
@@ -137,25 +157,6 @@ export const ResearchPage = () => {
           </div>
         </section>
 
-        {/* Ongoing Projects */}
-        <section>
-          <h2 className="text-lg font-medium mb-4">Ongoing Projects</h2>
-          <div className="space-y-4">
-            <div>
-              <h4 className="font-medium mb-2">Current Project Title</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Brief description of what you're currently working on. Expected completion timeline 
-                and potential impact.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-medium mb-2">Collaborative Research</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Description of collaborative work with other researchers or institutions.
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
