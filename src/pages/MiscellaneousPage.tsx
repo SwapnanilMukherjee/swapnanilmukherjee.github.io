@@ -1,4 +1,33 @@
+import { useEffect, useState } from "react";
+import { loadTeaching, loadService, loadAwards, type TeachingPosition, type ServiceItem, type Award } from "@/lib/dataLoader";
+
 export const MiscellaneousPage = () => {
+  const [teaching, setTeaching] = useState<TeachingPosition[]>([]);
+  const [service, setService] = useState<ServiceItem[]>([]);
+  const [awards, setAwards] = useState<Award[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const [teachingData, serviceData, awardsData] = await Promise.all([
+          loadTeaching(),
+          loadService(),
+          loadAwards()
+        ]);
+        setTeaching(teachingData);
+        setService(serviceData);
+        setAwards(awardsData);
+      } catch (error) {
+        console.error('Error loading miscellaneous data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-2xl font-semibold mb-8">Miscellaneous</h1>
@@ -7,77 +36,73 @@ export const MiscellaneousPage = () => {
         {/* Teaching */}
         <section>
           <h2 className="text-lg font-medium mb-4">Teaching</h2>
-          <div className="space-y-4">
-            <div>
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-medium">Teaching Assistant - Course Name</h3>
-                <span className="text-sm text-muted-foreground">Fall 2024</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                University Name • Instructor: Prof. Name
-              </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                Responsibilities: Leading lab sessions, grading assignments, holding office hours.
-              </p>
+          {loading ? (
+            <div className="text-muted-foreground">Loading teaching data...</div>
+          ) : teaching.length > 0 ? (
+            <div className="space-y-4">
+              {teaching.map((position, index) => (
+                <div key={index}>
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-medium">{position.title}</h3>
+                    <span className="text-sm text-muted-foreground">{position.semester}</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {position.institution} • Instructor: {position.instructor}
+                  </p>
+                  {position.responsibilities && (
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Responsibilities: {position.responsibilities}
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
-            
-            <div>
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-medium">Grader - Another Course</h3>
-                <span className="text-sm text-muted-foreground">Spring 2024</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                University Name • Instructor: Prof. Another Name
-              </p>
-            </div>
-          </div>
+          ) : (
+            <div className="text-muted-foreground">No teaching experience available.</div>
+          )}
         </section>
 
         {/* Service */}
         <section>
           <h2 className="text-lg font-medium mb-4">Service</h2>
-          <div className="space-y-3">
-            <div>
-              <h3 className="font-medium">Reviewer</h3>
-              <p className="text-sm text-muted-foreground">
-                Conference/Workshop Name 2024, Journal Name
-              </p>
+          {loading ? (
+            <div className="text-muted-foreground">Loading service data...</div>
+          ) : service.length > 0 ? (
+            <div className="space-y-3">
+              {service.map((item, index) => (
+                <div key={index}>
+                  <h3 className="font-medium">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">
+                    {item.organization}{item.description && ` - ${item.description}`}
+                  </p>
+                </div>
+              ))}
             </div>
-            <div>
-              <h3 className="font-medium">Student Volunteer</h3>
-              <p className="text-sm text-muted-foreground">
-                Major Conference 2024 - Helped with registration and logistics
-              </p>
-            </div>
-          </div>
+          ) : (
+            <div className="text-muted-foreground">No service activities available.</div>
+          )}
         </section>
 
         {/* Awards & Honors */}
         <section>
           <h2 className="text-lg font-medium mb-4">Awards & Honors</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="font-medium">Graduate Fellowship</h3>
-                <p className="text-sm text-muted-foreground">University Name</p>
-              </div>
-              <span className="text-sm text-muted-foreground">2024</span>
+          {loading ? (
+            <div className="text-muted-foreground">Loading awards data...</div>
+          ) : awards.length > 0 ? (
+            <div className="space-y-3">
+              {awards.map((award, index) => (
+                <div key={index} className="flex justify-between items-start">
+                  <div>
+                    <h3 className="font-medium">{award.title}</h3>
+                    <p className="text-sm text-muted-foreground">{award.organization}</p>
+                  </div>
+                  <span className="text-sm text-muted-foreground">{award.year}</span>
+                </div>
+              ))}
             </div>
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="font-medium">Best Student Paper Award</h3>
-                <p className="text-sm text-muted-foreground">Conference Name</p>
-              </div>
-              <span className="text-sm text-muted-foreground">2023</span>
-            </div>
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="font-medium">Undergraduate Research Award</h3>
-                <p className="text-sm text-muted-foreground">Previous University</p>
-              </div>
-              <span className="text-sm text-muted-foreground">2022</span>
-            </div>
-          </div>
+          ) : (
+            <div className="text-muted-foreground">No awards available.</div>
+          )}
         </section>
 
         {/* Skills & Tools */}

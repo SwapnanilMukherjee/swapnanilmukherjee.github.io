@@ -1,0 +1,25 @@
+# Blog posts data - Edit this file to add new blog posts
+posts:
+  - date: "2024-12-01"
+    category: "Research"
+    title: "Reflections on My First Year as a PhD Student"
+    slug: "first-year-phd-reflections"
+    excerpt: "Looking back at the challenges and discoveries of my first year in graduate school. What I've learned about research, academia, and myself..."
+    
+  - date: "2024-10-15"
+    category: "Technical"
+    title: "Understanding [Technical Topic]: A Beginner's Guide"
+    slug: "technical-topic-guide"
+    excerpt: "Breaking down complex concepts in [your field] for newcomers to the area. Key insights and practical applications..."
+    
+  - date: "2024-08-20"
+    category: "Academic Life"
+    title: "Conference Experience: Presenting at [Conference Name]"
+    slug: "conference-experience"
+    excerpt: "My experience presenting research at my first major academic conference. Lessons learned and connections made..."
+    
+  - date: "2024-06-10"
+    category: "Resources"
+    title: "Essential Resources for [Your Field] Researchers"
+    slug: "essential-resources"
+    excerpt: "A curated list of papers, tools, and resources that have been invaluable in my research journey..."

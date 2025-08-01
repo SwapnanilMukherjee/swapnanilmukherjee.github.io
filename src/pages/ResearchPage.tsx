@@ -1,6 +1,26 @@
 import { FileText, ExternalLink } from "lucide-react";
+import { useEffect, useState } from "react";
+import { loadPublications, type Publication } from "@/lib/dataLoader";
 
 export const ResearchPage = () => {
+  const [publications, setPublications] = useState<Record<string, Publication[]>>({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const pubData = await loadPublications();
+        setPublications(pubData);
+      } catch (error) {
+        console.error('Error loading publications:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       <h1 className="text-2xl font-semibold mb-8">Research</h1>
@@ -40,121 +60,73 @@ export const ResearchPage = () => {
         <section>
           <h2 className="text-lg font-medium mb-6">Publications</h2>
           
-          {/* 2024 */}
-          <div className="mb-8">
-            <h3 className="text-md font-medium mb-4 text-accent">2024</h3>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-20 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-muted-foreground" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-medium mb-2">
-                    Your Paper Title: A Novel Approach to [Problem Area]
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    <strong>Your Name</strong>, Co-Author One, Co-Author Two, Senior Author
-                  </p>
-                  <p className="text-sm text-accent mb-3">
-                    Conference on [Area] (Top-tier venue), 2024
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    Brief description of your paper's contribution. What problem did you solve? 
-                    What was novel about your approach? What were the key results?
-                  </p>
-                  <div className="flex gap-4 text-sm">
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      Abstract
-                    </a>
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      PDF
-                    </a>
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <ExternalLink className="w-3 h-3" />
-                      Code
-                    </a>
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      BibTeX
-                    </a>
+          {loading ? (
+            <div className="text-muted-foreground">Loading publications...</div>
+          ) : Object.keys(publications).length > 0 ? (
+            Object.keys(publications)
+              .sort((a, b) => parseInt(b) - parseInt(a))
+              .map(year => (
+                <div key={year} className="mb-8">
+                  <h3 className="text-md font-medium mb-4 text-accent">{year}</h3>
+                  <div className="space-y-6">
+                    {publications[year].map((pub, index) => (
+                      <div key={index} className="flex gap-4">
+                        <div className="w-20 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
+                          <FileText className="w-6 h-6 text-muted-foreground" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-medium mb-2">
+                            {pub.title}
+                          </h4>
+                          <p className="text-sm text-muted-foreground mb-2">
+                            {pub.authors.map((author, i) => (
+                              <span key={i}>
+                                {author.isYou ? <strong>{author.name}</strong> : author.name}
+                                {i < pub.authors.length - 1 ? ", " : ""}
+                              </span>
+                            ))}
+                          </p>
+                          <p className="text-sm text-accent mb-3">
+                            {pub.venue}, {pub.year}
+                          </p>
+                          <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                            {pub.description}
+                          </p>
+                          <div className="flex gap-4 text-sm">
+                            {pub.links.abstract && (
+                              <a href={pub.links.abstract} className="text-accent hover:text-primary hover:underline flex items-center gap-1">
+                                <FileText className="w-3 h-3" />
+                                Abstract
+                              </a>
+                            )}
+                            {pub.links.pdf && (
+                              <a href={pub.links.pdf} className="text-accent hover:text-primary hover:underline flex items-center gap-1">
+                                <FileText className="w-3 h-3" />
+                                PDF
+                              </a>
+                            )}
+                            {pub.links.code && (
+                              <a href={pub.links.code} className="text-accent hover:text-primary hover:underline flex items-center gap-1">
+                                <ExternalLink className="w-3 h-3" />
+                                Code
+                              </a>
+                            )}
+                            {pub.links.bibtex && (
+                              <a href={pub.links.bibtex} className="text-accent hover:text-primary hover:underline flex items-center gap-1">
+                                <FileText className="w-3 h-3" />
+                                BibTeX
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-20 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-muted-foreground" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-medium mb-2">
-                    Another Research Paper: Exploring [Research Area]
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    <strong>Your Name</strong>, Advisor Name, Collaborator
-                  </p>
-                  <p className="text-sm text-accent mb-3">
-                    Workshop at [Major Conference], 2024
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    Another brief description of the work. What was the research question? 
-                    What methodology did you use? What insights did you gain?
-                  </p>
-                  <div className="flex gap-4 text-sm">
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      Abstract
-                    </a>
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      PDF
-                    </a>
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      BibTeX
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 2023 */}
-          <div className="mb-8">
-            <h3 className="text-md font-medium mb-4 text-accent">2023</h3>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-20 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-muted-foreground" />
-                </div>
-                <div className="flex-1">
-                  <h4 className="font-medium mb-2">
-                    Previous Work: Investigating [Earlier Research Topic]
-                  </h4>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    <strong>Your Name</strong>, Other Authors
-                  </p>
-                  <p className="text-sm text-accent mb-3">
-                    [Journal/Conference Name], 2023
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-                    Description of earlier work that led to your current research interests.
-                  </p>
-                  <div className="flex gap-4 text-sm">
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      PDF
-                    </a>
-                    <a href="#" className="text-accent hover:text-primary hover:underline flex items-center gap-1">
-                      <FileText className="w-3 h-3" />
-                      BibTeX
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              ))
+          ) : (
+            <div className="text-muted-foreground">No publications available.</div>
+          )}
         </section>
 
       </div>

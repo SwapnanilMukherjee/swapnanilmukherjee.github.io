@@ -2,8 +2,40 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Mail, FileText } from "lucide-react";
 import profileImage from "@/assets/profile-image.jpg";
+import { useEffect, useState } from "react";
+import { loadPublications, loadNews, type Publication, type NewsItem } from "@/lib/dataLoader";
 
 export const HomePage = () => {
+  const [publications, setPublications] = useState<Record<string, Publication[]>>({});
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const [pubData, newsData] = await Promise.all([
+          loadPublications(),
+          loadNews()
+        ]);
+        setPublications(pubData);
+        setNews(newsData);
+      } catch (error) {
+        console.error('Error loading data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  // Get recent publications (first 2 from most recent year)
+  const recentPublications = Object.keys(publications)
+    .sort((a, b) => parseInt(b) - parseInt(a))
+    .slice(0, 1)
+    .flatMap(year => publications[year])
+    .slice(0, 2);
+
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
       {/* Profile Section */}
@@ -101,56 +133,51 @@ export const HomePage = () => {
         </div>
         
         <div className="space-y-6">
-          {/* Research Paper 1 */}
-          <div className="flex gap-4">
-            <div className="w-16 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
-              <FileText className="w-6 h-6 text-muted-foreground" />
-            </div>
-            <div>
-              <h3 className="font-medium mb-1">
-                <a href="#" className="academic-link">
-                  Your Latest Paper Title: A Comprehensive Study
-                </a>
-              </h3>
-              <p className="text-sm text-muted-foreground mb-2">
-                <strong>Your Name</strong>, Co-Author Name, Another Author
-              </p>
-              <p className="text-sm text-muted-foreground mb-2">
-                Conference/Journal Name, 2024
-              </p>
-              <div className="flex gap-3 text-xs">
-                <a href="#" className="text-accent hover:text-primary hover:underline">Abstract</a>
-                <a href="#" className="text-accent hover:text-primary hover:underline">PDF</a>
-                <a href="#" className="text-accent hover:text-primary hover:underline">Code</a>
-                <a href="#" className="text-accent hover:text-primary hover:underline">BibTeX</a>
+          {loading ? (
+            <div className="text-muted-foreground">Loading publications...</div>
+          ) : recentPublications.length > 0 ? (
+            recentPublications.map((pub, index) => (
+              <div key={index} className="flex gap-4">
+                <div className="w-16 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-muted-foreground" />
+                </div>
+                <div>
+                  <h3 className="font-medium mb-1">
+                    <a href="#" className="academic-link">
+                      {pub.title}
+                    </a>
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {pub.authors.map((author, i) => (
+                      <span key={i}>
+                        {author.isYou ? <strong>{author.name}</strong> : author.name}
+                        {i < pub.authors.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    {pub.venue}, {pub.year}
+                  </p>
+                  <div className="flex gap-3 text-xs">
+                    {pub.links.abstract && (
+                      <a href={pub.links.abstract} className="text-accent hover:text-primary hover:underline">Abstract</a>
+                    )}
+                    {pub.links.pdf && (
+                      <a href={pub.links.pdf} className="text-accent hover:text-primary hover:underline">PDF</a>
+                    )}
+                    {pub.links.code && (
+                      <a href={pub.links.code} className="text-accent hover:text-primary hover:underline">Code</a>
+                    )}
+                    {pub.links.bibtex && (
+                      <a href={pub.links.bibtex} className="text-accent hover:text-primary hover:underline">BibTeX</a>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Research Paper 2 */}
-          <div className="flex gap-4">
-            <div className="w-16 h-16 bg-muted rounded flex-shrink-0 flex items-center justify-center">
-              <FileText className="w-6 h-6 text-muted-foreground" />
-            </div>
-            <div>
-              <h3 className="font-medium mb-1">
-                <a href="#" className="academic-link">
-                  Another Research Paper: Novel Approaches and Methods
-                </a>
-              </h3>
-              <p className="text-sm text-muted-foreground mb-2">
-                <strong>Your Name</strong>, Collaborator Name
-              </p>
-              <p className="text-sm text-muted-foreground mb-2">
-                Workshop/Conference Name, 2024
-              </p>
-              <div className="flex gap-3 text-xs">
-                <a href="#" className="text-accent hover:text-primary hover:underline">Abstract</a>
-                <a href="#" className="text-accent hover:text-primary hover:underline">PDF</a>
-                <a href="#" className="text-accent hover:text-primary hover:underline">BibTeX</a>
-              </div>
-            </div>
-          </div>
+            ))
+          ) : (
+            <div className="text-muted-foreground">No publications available.</div>
+          )}
         </div>
       </section>
 
@@ -164,24 +191,20 @@ export const HomePage = () => {
         </div>
         
         <div className="space-y-4">
-          <div className="flex gap-4">
-            <span className="text-sm text-muted-foreground w-20 flex-shrink-0">2024-12-15</span>
-            <p className="text-sm">
-              Started my PhD at University Name! Excited to work on [research area] with Prof. Advisor.
-            </p>
-          </div>
-          <div className="flex gap-4">
-            <span className="text-sm text-muted-foreground w-20 flex-shrink-0">2024-11-20</span>
-            <p className="text-sm">
-              Paper accepted at [Conference Name]! Looking forward to presenting our work on [topic].
-            </p>
-          </div>
-          <div className="flex gap-4">
-            <span className="text-sm text-muted-foreground w-20 flex-shrink-0">2024-10-01</span>
-            <p className="text-sm">
-              Completed internship at [Company/Lab]. Great experience working on [project/area].
-            </p>
-          </div>
+          {loading ? (
+            <div className="text-muted-foreground">Loading news...</div>
+          ) : news.length > 0 ? (
+            news.slice(0, 3).map((item, index) => (
+              <div key={index} className="flex gap-4">
+                <span className="text-sm text-muted-foreground w-20 flex-shrink-0">{item.date}</span>
+                <p className="text-sm">
+                  {item.content}
+                </p>
+              </div>
+            ))
+          ) : (
+            <div className="text-muted-foreground">No news available.</div>
+          )}
         </div>
       </section>
     </div>
