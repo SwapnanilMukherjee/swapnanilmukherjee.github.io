@@ -1,0 +1,65 @@
+# Jekyll configuration for academic portfolio
+title: "Academic Portfolio"
+email: your.email@university.edu
+description: >- # this means to ignore newlines until "baseurl:"
+  PhD Student at University Name. Research interests in [Your Research Area].
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+github_username: yourusername
+scholar_userid: your_scholar_id
+linkedin_username: yourusername
+twitter_username: yourusername
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Include files
+include:
+  - _pages
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"

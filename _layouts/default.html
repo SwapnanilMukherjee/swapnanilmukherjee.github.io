@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Design system colors matching your original
+                        background: 'hsl(0 0% 100%)',
+                        foreground: 'hsl(212 13% 23%)',
+                        card: 'hsl(0 0% 100%)',
+                        'card-foreground': 'hsl(212 13% 23%)',
+                        primary: 'hsl(212 89% 48%)',
+                        'primary-foreground': 'hsl(0 0% 100%)',
+                        secondary: 'hsl(210 40% 96%)',
+                        'secondary-foreground': 'hsl(212 13% 15%)',
+                        muted: 'hsl(210 40% 96%)',
+                        'muted-foreground': 'hsl(212 13% 40%)',
+                        accent: 'hsl(212 13% 50%)',
+                        'accent-foreground': 'hsl(0 0% 100%)',
+                        border: 'hsl(214.3 31.8% 91.4%)',
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    
+    <!-- Custom CSS for exact design match -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        h1 { @apply text-2xl font-semibold; }
+        h2 { @apply text-xl font-semibold; }
+        h3 { @apply text-lg font-medium; }
+        .academic-link {
+            @apply text-accent hover:text-primary hover:underline;
+        }
+    </style>
+    
+    {% seo %}
+    {% feed_meta %}
+</head>
+<body class="min-h-screen bg-background text-foreground">
+    {% include navigation.html %}
+    
+    <main>
+        {{ content }}
+    </main>
+    
+    {% include footer.html %}
+</body>
+</html>
