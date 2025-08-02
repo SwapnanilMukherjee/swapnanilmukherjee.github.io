@@ -30,11 +30,13 @@ export const HomePage = () => {
   }, []);
 
   // Get recent publications (first 2 from most recent year)
-  const recentPublications = Object.keys(publications)
-    .sort((a, b) => parseInt(b) - parseInt(a))
-    .slice(0, 1)
-    .flatMap(year => publications[year])
-    .slice(0, 2);
+  const recentPublications = publications && Object.keys(publications).length > 0
+    ? Object.keys(publications)
+        .sort((a, b) => parseInt(b) - parseInt(a))
+        .slice(0, 1)
+        .flatMap(year => publications[year])
+        .slice(0, 2)
+    : [];
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">

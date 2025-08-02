@@ -62,7 +62,7 @@ export const ResearchPage = () => {
           
           {loading ? (
             <div className="text-muted-foreground">Loading publications...</div>
-          ) : Object.keys(publications).length > 0 ? (
+          ) : publications && Object.keys(publications).length > 0 ? (
             Object.keys(publications)
               .sort((a, b) => parseInt(b) - parseInt(a))
               .map(year => (
