@@ -74,7 +74,10 @@ export const loadPublications = async (): Promise<Record<string, Publication[]>>
       throw new Error(`Failed to fetch publications: ${response.status}`);
     }
     const text = await response.text();
+    console.log('Publications YAML text:', text);
     const data = yaml.load(text) as { publications: Record<string, Publication[]> };
+    console.log('Parsed publications data:', data);
+    console.log('Publications result:', data.publications);
     return data.publications || {};
   } catch (error) {
     console.error('Error loading publications:', error);
@@ -86,8 +89,11 @@ export const loadNews = async (): Promise<NewsItem[]> => {
   try {
     const response = await fetch('/src/data/news.yaml');
     const text = await response.text();
+    console.log('News YAML text:', text);
     const data = yaml.load(text) as { news: NewsItem[] };
-    return data.news;
+    console.log('Parsed news data:', data);
+    console.log('News result:', data.news);
+    return data.news || [];
   } catch (error) {
     console.error('Error loading news:', error);
     return [];

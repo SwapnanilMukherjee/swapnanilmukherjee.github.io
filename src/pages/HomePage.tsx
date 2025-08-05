@@ -13,10 +13,13 @@ export const HomePage = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
+        console.log('Starting to load data...');
         const [pubData, newsData] = await Promise.all([
           loadPublications(),
           loadNews()
         ]);
+        console.log('Publications loaded:', pubData);
+        console.log('News loaded:', newsData);
         setPublications(pubData);
         setNews(newsData);
       } catch (error) {
@@ -37,6 +40,11 @@ export const HomePage = () => {
         .flatMap(year => publications[year])
         .slice(0, 2)
     : [];
+
+  console.log('Publications state:', publications);
+  console.log('Recent publications:', recentPublications);
+  console.log('News state:', news);
+  console.log('Loading state:', loading);
 
   return (
     <div className="max-w-4xl mx-auto px-6 py-12">
