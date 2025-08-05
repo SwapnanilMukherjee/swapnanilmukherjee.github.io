@@ -70,9 +70,12 @@ export interface AcademicTravelEvent {
 export const loadPublications = async (): Promise<Record<string, Publication[]>> => {
   try {
     const response = await fetch('/src/data/publications.yaml');
+    if (!response.ok) {
+      throw new Error(`Failed to fetch publications: ${response.status}`);
+    }
     const text = await response.text();
     const data = yaml.load(text) as { publications: Record<string, Publication[]> };
-    return data.publications;
+    return data.publications || {};
   } catch (error) {
     console.error('Error loading publications:', error);
     return {};
