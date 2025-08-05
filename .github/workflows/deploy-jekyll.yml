@@ -21,6 +21,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      # --- Add Node.js Setup ---
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Or your preferred Node.js version
+          cache: 'npm'
+
+      # --- Install Node Dependencies and Build CSS ---
+      - name: Install dependencies and build CSS
+        run: |
+          npm install
+          npm run build
+      
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
