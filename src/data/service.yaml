@@ -1,10 +1,21 @@
-# Service and volunteer work data - Edit this file to add service activities
+# Academic service activities - Edit this file to update your service contributions
 service:
-  - title: "Reviewer"
-    organization: "Conference/Workshop Name 2024, Journal Name"
-    year: "2024"
-    
   - title: "Student Volunteer"
-    organization: "Major Conference 2024"
-    description: "Helped with registration and logistics"
+    organization: "[Conference Name] 2024"
     year: "2024"
+    description: "Assisted with conference logistics, registration, and attendee support"
+
+  - title: "Peer Reviewer"
+    organization: "[Journal/Conference Name]"
+    year: "2024"
+    description: "Reviewed manuscripts in [research area] for quality and contribution assessment"
+
+  - title: "Graduate Student Representative"
+    organization: "[University] Department of [Department]"
+    year: "2024"
+    description: "Represented graduate student interests in department meetings and policy discussions"
+
+  - title: "Organizer"
+    organization: "[University] Graduate Student Research Symposium"
+    year: "2024"
+    description: "Helped organize annual research presentation event for graduate students"

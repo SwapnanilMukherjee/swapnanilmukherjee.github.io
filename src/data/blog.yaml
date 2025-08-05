@@ -1,25 +1,25 @@
-# Blog posts data - Edit this file to add new blog posts
+# Blog posts - Edit this file to update your blog content
 posts:
-  - date: "2024-12-01"
+  - date: "2024-11-15"
     category: "Research"
-    title: "Reflections on My First Year as a PhD Student"
-    slug: "first-year-phd-reflections"
-    excerpt: "Looking back at the challenges and discoveries of my first year in graduate school. What I've learned about research, academia, and myself..."
-    
-  - date: "2024-10-15"
-    category: "Technical"
-    title: "Understanding [Technical Topic]: A Beginner's Guide"
-    slug: "technical-topic-guide"
-    excerpt: "Breaking down complex concepts in [your field] for newcomers to the area. Key insights and practical applications..."
-    
-  - date: "2024-08-20"
+    title: "My Journey into [Research Area]: Lessons Learned"
+    slug: "research-journey-lessons-learned"
+    excerpt: "Reflections on starting my PhD and diving deep into [specific research area]. What I've discovered, challenges I've faced, and insights that might help other early-career researchers."
+
+  - date: "2024-10-20"
     category: "Academic Life"
-    title: "Conference Experience: Presenting at [Conference Name]"
-    slug: "conference-experience"
-    excerpt: "My experience presenting research at my first major academic conference. Lessons learned and connections made..."
-    
-  - date: "2024-06-10"
-    category: "Resources"
-    title: "Essential Resources for [Your Field] Researchers"
-    slug: "essential-resources"
-    excerpt: "A curated list of papers, tools, and resources that have been invaluable in my research journey..."
+    title: "Navigating Your First Academic Conference"
+    slug: "first-academic-conference-guide"
+    excerpt: "Tips and insights for making the most of your first academic conference experience. From presentation preparation to networking effectively in the academic community."
+
+  - date: "2024-09-30"
+    category: "Tools & Resources"
+    title: "Essential Tools for PhD Students in [Your Field]"
+    slug: "essential-phd-tools"
+    excerpt: "A curated list of software, resources, and workflows that have made my research more efficient and organized. From reference management to data analysis tools."
+
+  - date: "2024-09-10"
+    category: "Personal"
+    title: "Balancing Research and Life: Finding Your Rhythm"
+    slug: "research-life-balance"
+    excerpt: "Thoughts on maintaining mental health and personal relationships while pursuing intensive research. Strategies that have worked for me and lessons learned along the way."

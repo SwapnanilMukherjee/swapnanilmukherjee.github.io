@@ -1,13 +1,19 @@
-# Teaching experience data - Edit this file to update teaching positions
+# Teaching experience - Edit this file to update your teaching activities
 teaching:
-  - title: "Teaching Assistant - Course Name"
-    institution: "University Name"
-    instructor: "Prof. Name"
+  - title: "Introduction to [Subject] (CS XXX)"
+    institution: "[University Name]"
+    instructor: "Teaching Assistant"
     semester: "Fall 2024"
-    responsibilities: "Leading lab sessions, grading assignments, holding office hours."
-    
-  - title: "Grader - Another Course"
-    institution: "University Name"
-    instructor: "Prof. Another Name"
+    responsibilities: "Led weekly discussion sections, held office hours, graded assignments and exams. Helped students understand fundamental concepts in [specific topics]."
+
+  - title: "[Advanced Course Name] (CS XXX)"
+    institution: "[University Name]"  
+    instructor: "Teaching Assistant"
     semester: "Spring 2024"
-    responsibilities: ""
+    responsibilities: "Assisted with lab sessions, mentored student projects, developed supplementary materials for complex topics."
+
+  - title: "Undergraduate Research Mentoring"
+    institution: "[University Name]"
+    instructor: "Research Mentor"
+    semester: "Summer 2024"
+    responsibilities: "Supervised 2 undergraduate students on research projects related to [area]. Guided them through the research process from literature review to experimental design."
