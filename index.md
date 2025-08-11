@@ -4,7 +4,7 @@ layout: default
 
 <!-- Profile Section -->
 <div class="profile">
-  <img src="/assets/profile-image.jpg" alt="Profile" class="profile-image">
+  <img src="/assets/profile-image.jpg" alt="Profile photo" class="profile-image" loading="eager" decoding="async">
   <div class="profile-info">
     <h1>Your Name</h1>
     <p class="title">PhD Student at University Name</p>
