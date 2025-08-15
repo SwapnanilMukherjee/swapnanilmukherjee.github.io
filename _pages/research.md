@@ -6,19 +6,23 @@ permalink: /research/
 
 # Research
 
-## Research Interests
-<ul>
-  <li>Machine Learning: representation learning, optimization, and robust generalization</li>
-  <li>Computer Vision: multimodal perception, self-supervised learning</li>
-  <li>Natural Language Processing: transformers, retrieval-augmented generation</li>
-</ul>
+<div class="section">
+  <h2>Research Interests</h2>
+  <ul class="research-list">
+    <li>Machine Learning: representation learning, optimization, and robust generalization</li>
+    <li>Computer Vision: multimodal perception, self-supervised learning</li>
+    <li>Natural Language Processing: transformers, retrieval-augmented generation</li>
+  </ul>
+</div>
 
-## Ongoing Work
-<ul>
-  <li>Scalable training recipes for efficient vision-language models</li>
-  <li>Benchmarking robustness under domain shift and distribution drift</li>
-  <li>Open-source tooling for reproducible ML experiments</li>
-</ul>
+<div class="section">
+  <h2>Ongoing Work</h2>
+  <ul class="research-list">
+    <li>Scalable training recipes for efficient vision-language models</li>
+    <li>Benchmarking robustness under domain shift and distribution drift</li>
+    <li>Open-source tooling for reproducible ML experiments</li>
+  </ul>
+</div>
 
 {% for publication in site.data.publications %}
 <div class="publication">
