@@ -5,6 +5,7 @@ permalink: /blog/
 ---
 
 # Blog
+<p> If I ever write  a blog, it will appear here. Stay anticipated! </p>
 
 {% if site.posts and site.posts != empty %}
 {% for post in site.posts %}
