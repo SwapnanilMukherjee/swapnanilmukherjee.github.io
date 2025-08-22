@@ -49,8 +49,8 @@ h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -
 h2 { font-size: 1.4rem; font-weight: 500; margin-bottom: 1rem; }
 h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
 p { font-size: 0.95rem; margin-bottom: 0.97rem; color: var(--muted); }
-a {color: var(--muted); text-decoration: underline dotted;}
-a:hover {color: var(--muted); font-weight: bold; text-decoration: underline dotted; transition: 100ms; transition-timing-function: ease-in-out;}
+p a {color: var(--muted); text-decoration: underline dotted;}
+p a:hover {color: var(--muted); font-weight: bold; text-decoration: underline dotted; transition: 100ms; transition-timing-function: ease-in-out;}
 
 /* Profile */
 .profile { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
