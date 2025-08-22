@@ -29,12 +29,12 @@ layout: default
           <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.417-.05-.134.04-.276.083-.42.13-2.670-.296-5.567.628-6.383 3.364C.378 17.884 0 22.844 0 23.533c0 .688.139 1.86.902 2.202.659.3 1.664.622 4.3-1.239C7.954 22.554 10.913 18.615 12 16.501c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.54 4.3 1.239.763-.342.902-1.514.902-2.202 0-.689-.378-5.649-.624-6.479-.816-2.736-3.713-3.66-6.383-3.364-.144-.047-.286-.09-.42-.13.142.012.281.03.417.05 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/>
         </svg>
       </a>
-      <a src="https://scholar.google.com/citations?user={{ site.scholar_userid}}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+      <a href="https://scholar.google.com/citations?user={{ site.scholar_userid}}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
           <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
         </svg>
       </a>
-      <a src="/assets/cv.pdf" class="cv-button" title="Download CV">
+      <a href="https://github.com/SwapnanilMukherjee/swapnanilmukherjee.github.io/blob/main/assets/CV.pdf" class="cv-button" title="Download CV">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
         CV
       </a>
@@ -46,10 +46,10 @@ layout: default
 <div class="section">
   <h2>About Me</h2>
   <p>I am a final year undergraduate student at <a href="https://wwww.ashoka.edu.in">Ashoka University</a>. My research interests lie in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.</p>
-  <p>I am currently an intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab</a> at IIIT Hyderabad where I am exploring representational alignment between modalities and its implication on downstream tasks in collaboration with <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank"> Microsoft Research India</a>. I am also pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">neurosymbolic methods</a> for verifiable and grounded Visual Question Answering (VQA), under the supervision of <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a src="/assets/cv.pdf>">CV</a>, or look at my <a href="/research">research</a>. 
+  <p>I am currently an intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab</a> at IIIT Hyderabad where I am exploring representational alignment between modalities and its implication on downstream tasks in collaboration with <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank"> Microsoft Research India</a>. I am also pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">neurosymbolic methods</a> for verifiable and grounded Visual Question Answering (VQA), under the supervision of <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a href="https://github.com/SwapnanilMukherjee/swapnanilmukherjee.github.io/blob/main/assets/CV.pdf>">CV</a>, or look at my <a href="/research">research</a>. 
   </p>
-  <p>Aside from work, there aren't many things that I do (which I am slowly trying to change). But sometimes, when I do find the motivation, I enjoy obsessing over frames. You can find some of them <a href="/gallery">here</a>. I am quite into Marvel (and other comic universes), have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, I try to swim sometimes.</p>
-  <p>Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
+  <p>Aside from work, there aren't many things that I do (which I am slowly trying to change). But sometimes, when I do find the motivation, I enjoy obsessing over frames. You can find some of them <a href="/gallery">here</a>. I am quite into Marvel (and other comic universes), have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, and I try to swim sometimes. Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
+  <p><b> I am also actively looking for PhD positions starting Fall 2026 in the aforementioned research areas. If there are any openings and I might be a good fit for your group, do let me know!</b></p>
 </div>
 
 <!-- Recent Publications -->

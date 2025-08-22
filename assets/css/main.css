@@ -91,6 +91,8 @@ p { margin-bottom: 1rem; color: var(--muted); }
 
 /* Sections */
 .section { margin-bottom: 3rem; }
+.section a {color: var(--muted); text-decoration: underline dotted;}
+.section a:hover {color: var(--muted); font-weight: bold; text-decoration: underline dotted;}
 .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
 .section-header a { font-size: 0.9rem; color: var(--muted); text-decoration: none; }
 .section-header a:hover { color: var(--text); text-decoration: underline; }
