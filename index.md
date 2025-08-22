@@ -7,7 +7,7 @@ layout: default
   <img src="/assets/profile-image.jpg" alt="Profile photo" class="profile-image" loading="eager" decoding="async">
   <div class="profile-info">
     <h1>Swapnanil Mukherjee</h1>
-    <p class="title">Final year undergraduate at Ashoka University</p>
+    <p class="title">Ashoka University</p>
     <p class="email">{{ site.email }}</p>
     
     <div class="social-links">
@@ -34,7 +34,7 @@ layout: default
           <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
         </svg>
       </a>
-      <a href="/assets/cv.pdf" class="cv-button" title="Download CV">
+      <a src="/assets/cv.pdf" class="cv-button" title="Download CV">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg>
         CV
       </a>
@@ -45,8 +45,11 @@ layout: default
 <!-- Bio Section -->
 <div class="section">
   <h2>About Me</h2>
-  <p>I am a researcher passionate about advancing the frontiers of machine learning and artificial intelligence. My work focuses on developing robust and efficient algorithms that can generalize across different domains and applications. I believe in the power of interdisciplinary collaboration and open science to tackle the most challenging problems in AI.</p>
-  <p>When I'm not in the lab, you can find me exploring new hiking trails, reading about philosophy of science, or experimenting with new coffee brewing techniques. I'm always excited to discuss research ideas and potential collaborations.</p>
+  <p>I am a final year undergraduate student at <a href=Ashoka University. My research interests lie in multimodal AI, problems at the intersection of vision and language, commonsense abilities in foundation models, and reasoning.</p>
+  <p>I am currently an intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab</a> at IIIT Hyderabad where I am exploring representational alignment between modalities and its implication on downstream tasks in collaboration with <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank"> Microsoft Research India</a>. I am also pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">neurosymbolic methods</a> for verifiable and grounded Visual Question Answering (VQA), under the supervision of <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a src="/assets/cv.pdf>">CV</a>, or look at my <a href="/research">research</a>. 
+  </p>
+  <p>Aside from work, there aren't many things that I do (which I am slowly trying to change). But sometimes, when I do find the motivation, I enjoy obsessing over frames. You can find some of them <a href="/gallery">here</a>. I am quite into Marvel (and other comic universes), have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, I try to swim sometimes.</p>
+  <p>Please reach out to me if you find any of these interesting, or just want to have a chat!<p>
 </div>
 
 <!-- Recent Publications -->

@@ -22,7 +22,7 @@ img { max-width: 100%; height: auto; display: block; }
 svg { width: 1em; height: 1em; }
 
 /* Layout */
-.container { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 950px; margin: 0 auto; padding: 0 24px; }
 main { min-height: calc(100vh - 140px); padding: 3rem 0; }
 
 /* Navigation */
@@ -52,7 +52,7 @@ p { margin-bottom: 1rem; color: var(--muted); }
 
 /* Profile */
 .profile { display: flex; gap: 2rem; margin-bottom: 3rem; align-items: flex-start; }
-.profile-image { width: 100px; height: 100px; border-radius: 9999px; object-fit: cover; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+.profile-image { width: 100px; height: 100px; padding: 0.2em; border-radius: 9999px; object-fit: cover; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
 .profile-info h1 { margin-bottom: 0.25rem; }
 .profile-info .title { color: var(--muted); margin-bottom: 0.5rem; }
 .profile-info .email { font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; }

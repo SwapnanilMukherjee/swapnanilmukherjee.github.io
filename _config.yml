@@ -1,6 +1,6 @@
 # Jekyll configuration for academic portfolio
 title: 
-email: swapnanil[dot]mukherjee_ug25[at]ashoka[dot]edu[dot]in
+email: swapnanil[dot]mukherjee_ug25[at]ashoka.edu.in
 description: >- # this means to ignore newlines until "baseurl:"
   Final year undergraduate student at Ashoka University. Research interests in [Your Research Area].
 baseurl: "" # the subpath of your site, e.g. /blog
