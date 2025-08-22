@@ -45,11 +45,11 @@ layout: default
 <!-- Bio Section -->
 <div class="section">
   <h2>About Me</h2>
-  <p>I am a final year undergraduate student at <a href=Ashoka University. My research interests lie in multimodal AI, problems at the intersection of vision and language, commonsense abilities in foundation models, and reasoning.</p>
+  <p>I am a final year undergraduate student at <a href="https://wwww.ashoka.edu.in">Ashoka University</a>. My research interests lie in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.</p>
   <p>I am currently an intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab</a> at IIIT Hyderabad where I am exploring representational alignment between modalities and its implication on downstream tasks in collaboration with <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank"> Microsoft Research India</a>. I am also pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">neurosymbolic methods</a> for verifiable and grounded Visual Question Answering (VQA), under the supervision of <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a src="/assets/cv.pdf>">CV</a>, or look at my <a href="/research">research</a>. 
   </p>
   <p>Aside from work, there aren't many things that I do (which I am slowly trying to change). But sometimes, when I do find the motivation, I enjoy obsessing over frames. You can find some of them <a href="/gallery">here</a>. I am quite into Marvel (and other comic universes), have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, I try to swim sometimes.</p>
-  <p>Please reach out to me if you find any of these interesting, or just want to have a chat!<p>
+  <p>Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
 </div>
 
 <!-- Recent Publications -->
@@ -59,13 +59,13 @@ layout: default
     <a href="/research">See all →</a>
   </div>
   
-  {% for publication in site.data.publications limit:3 %}
+  {% for publication in site.data.publications limit:2 %}
   <div class="publication">
     <div class="publication-icon">📄</div>
     <div class="publication-content">
       <h3><a href="{{ publication.url }}">{{ publication.title }}</a></h3>
       <p class="authors">{{ publication.authors }}</p>
-      <p class="venue">{{ publication.venue }}</p>
+      <p class="venue"><i>{{ publication.venue }}</i></p>
       <div class="publication-links">
         {% if publication.paper %}<a class="link-with-icon" href="{{ publication.paper }}"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>Paper</span></a>{% endif %}
         {% if publication.code %}<a class="link-with-icon" href="{{ publication.code }}" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><polyline points="17 8 21 12 17 16"/></svg><span>Code</span></a>{% endif %}
