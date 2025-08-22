@@ -49,6 +49,8 @@ h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.
 h2 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; }
 h3 { font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem; }
 p { margin-bottom: 1rem; color: var(--muted); }
+p a {color: var(--muted); text-decoration: underline dotted; }
+p a:hover {color: var(--muted); font-weight: bold; text-decoration: underline dotted;}
 
 /* Profile */
 .profile { display: flex; gap: 2rem; margin-bottom: 3rem; align-items: flex-start; }
@@ -91,8 +93,6 @@ p { margin-bottom: 1rem; color: var(--muted); }
 
 /* Sections */
 .section { margin-bottom: 3rem; }
-.section a {color: var(--muted); text-decoration: underline dotted;}
-.section a:hover {color: var(--muted); font-weight: bold; text-decoration: underline dotted;}
 .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
 .section-header a { font-size: 0.9rem; color: var(--muted); text-decoration: none; }
 .section-header a:hover { color: var(--text); text-decoration: underline; }
