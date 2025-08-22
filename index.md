@@ -9,7 +9,6 @@ layout: default
     <h1>Swapnanil Mukherjee</h1>
     <p class="title">Final year undergraduate at Ashoka University</p>
     <p class="email">{{ site.email }}</p>
-    <p>Research interests in Machine Learning, Computer Vision, and Natural Language Processing.</p>
     
     <div class="social-links">
       <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" title="GitHub">
@@ -30,7 +29,7 @@ layout: default
           <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.038.417-.05-.134.04-.276.083-.42.13-2.670-.296-5.567.628-6.383 3.364C.378 17.884 0 22.844 0 23.533c0 .688.139 1.86.902 2.202.659.3 1.664.622 4.3-1.239C7.954 22.554 10.913 18.615 12 16.501c1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.54 4.3 1.239.763-.342.902-1.514.902-2.202 0-.689-.378-5.649-.624-6.479-.816-2.736-3.713-3.66-6.383-3.364-.144-.047-.286-.09-.42-.13.142.012.281.03.417.05 2.67.296 5.568-.628 6.383-3.364.246-.829.624-5.789.624-6.479 0-.688-.139-1.86-.902-2.203-.659-.299-1.664-.621-4.3 1.24C16.046 4.747 13.087 8.686 12 10.8z"/>
         </svg>
       </a>
-      <a href="https://scholar.google.com/citations?user={{ site.scholar_userid}}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
+      <a src="https://scholar.google.com/citations?user={{ site.scholar_userid}}" target="_blank" rel="noopener noreferrer" title="Google Scholar">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
           <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
         </svg>
@@ -45,7 +44,7 @@ layout: default
 
 <!-- Bio Section -->
 <div class="section">
-  <h2>Bio</h2>
+  <h2>About Me</h2>
   <p>I am a researcher passionate about advancing the frontiers of machine learning and artificial intelligence. My work focuses on developing robust and efficient algorithms that can generalize across different domains and applications. I believe in the power of interdisciplinary collaboration and open science to tackle the most challenging problems in AI.</p>
   <p>When I'm not in the lab, you can find me exploring new hiking trails, reading about philosophy of science, or experimenting with new coffee brewing techniques. I'm always excited to discuss research ideas and potential collaborations.</p>
 </div>
