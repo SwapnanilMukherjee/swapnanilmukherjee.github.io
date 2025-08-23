@@ -29,7 +29,7 @@ permalink: /research/
 </div>
 
 <div class="section">
-  <h2>Publications</h2>
+  <h2>All Publications</h2>
   {% for publication in site.data.publications %}
   <div class="publication">
     <div class="publication-icon">📄</div>
