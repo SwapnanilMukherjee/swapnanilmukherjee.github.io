@@ -58,6 +58,7 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
 .profile-info h1 { margin-bottom: 0.25rem; }
 .profile-info .title { color: var(--muted); margin-bottom: 0.5rem; }
 .profile-info .email { font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; }
+.note {text-decoration: underline;color: var(--text)}
 
 /* Social links */
 .social-links { display: flex; gap: 0rem; align-items: center; }
