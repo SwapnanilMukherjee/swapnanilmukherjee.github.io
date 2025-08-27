@@ -20,12 +20,12 @@ permalink: /research/
 </div>
 
 <div class="section">
-  <h2>Past Experience</h2>
-  <ul class="research-list">
-    <li>Scalable training recipes for efficient vision-language models</li>
-    <li>Benchmarking robustness under domain shift and distribution drift</li>
-    <li>Open-source tooling for reproducible ML experiments</li>
-  </ul>
+  <h2>Past Experience</h2>
+  <ul class="research-list">
+    [cite_start]    <li><p><b>ML-based Forecasting of Antiretroviral Therapy (ART) Drugs:</b> As a research intern at the Koita Centre for Digital Health Ashoka (KCDH-A) [cite: 28][cite_start], I worked with Prof. Debayan Gupta and in collaboration with Prof. Steven Clipman of Johns Hopkins Medicine Institute[cite: 30]. [cite_start]Our goal was to create machine learning methods for enhanced forecasting of critical antiretroviral therapy (ART) drugs for India's National AIDS Control Organization (NACO)[cite: 30]. [cite_start]My role involved setting up the complete data cleaning and processing pipeline, experimenting with different models [cite: 31][cite_start], and developing the first few iterations of the forecasting tool[cite: 32]. [cite_start]We presented our initial results to senior NACO executives[cite: 32]. [cite_start]The method is now being adopted by NACO for country-wide forecasting of more than 17 HIV drugs, which will optimize availability and positively impact lakhs of patients living with HIV in India[cite: 33]. [cite_start]Our poster on this work was also presented at the Johns Hopkins GKII Meet in 2024[cite: 52].</p></li>
+    [cite_start]    <li><p><b>Zero-Shot Coreset Selection for Dataset Distillation:</b> Under Prof. Raghavendra Singh at the Ashoka Mphasis Lab [cite: 38][cite_start], I worked to develop compute-efficient and easily scalable methods for dataset distillation, or data pruning, through a graph and network-analysis centered approach[cite: 38]. [cite_start]I came up with a novel zero-shot method for coreset selection on image datasets [cite: 46] [cite_start]using a simple graph-based approach for dataset distillation[cite: 46]. [cite_start]The key highlight of this technique is its ability to identify important examples in a given dataset without requiring any training on that target data[cite: 47]. [cite_start]The method achieves performance comparable to current state-of-the-art (SOTA) methods while being significantly more computationally simple and efficient[cite: 48].</p></li>
+    [cite_start]    <li><p><b>ML-based Cancer Metastasis Prognosis:</b> I contributed to the AISCan project under Prof. Debayan Gupta [cite: 37][cite_start], which focused on the precision profiling of cancerous tumor cells for a predictive analysis of cancer metastasis and progression[cite: 37]. [cite_start]Working with Prof. Subhashis Halder's lab, we developed a novel machine learning-based method of digital cytometry to classify and quantify gene expression data from human stem cells[cite: 43]. [cite_start]This allows for a highly accurate profiling of tumors to aid in the diagnosis and treatment of the disease[cite: 43]. [cite_start]My specific responsibilities included collating and preparing the data used for training, running all ML-based experiments, and developing the primary codebase for a software package that integrates this functionality into a user-friendly tool[cite: 44]. [cite_start]This work is currently under review[cite: 45].</p></li>
+  </ul>
 </div>
 
 <div class="section">
