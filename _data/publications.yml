@@ -12,17 +12,16 @@
   url: "https://www.biorxiv.org/content/10.1101/2023.11.24.568600v1"
   paper: "https://www.biorxiv.org/content/biorxiv/early/2023/11/25/2023.11.24.568600.full.pdf"
 
-
+- title: "FedTree: Federated Learning on Tabular Medical Data [Poster]"
+  authors: "Bhavesh Neekhra, Swapnanil Mukherjee, Vinayak Goswamy, Debayan Gupta"
+  venue: "4th ICGA Conference 2023"
+  url: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
+  code: "https://github.com/bhaveshneekhra/mlcb_23/tree/main"
+  project: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
+  
 - title: "Application of Transformer-Based Language Models to Detect Hate Speech in Social Media"
   authors: "Swapnanil Mukherjee, Sujit Das"
   venue: "Journal of Computational and Cognitive Engineering (2021)"
   url: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105"
   paper: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105/86"
   code: "https://github.com/SwapnanilMukherjee/hate-speech-detection-with-transformers"
-
-- title: "FedTree: Federated Learning on Tabular Medical Data (Poster)"
-  authors: "Bhavesh Neekhra, Swapnanil Mukherjee, Vinayak Goswamy, Debayan Gupta"
-  venue: "4th ICGA Conference 2023"
-  url: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
-  code: "https://github.com/bhaveshneekhra/mlcb_23/tree/main"
-  project: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
