@@ -29,6 +29,9 @@ permalink: /research/
 </div>
 <div class="section">
   <h2>All Publications</h2>
+  <p> 
+    For citation information, please check my <a href="https://scholar.google.com/citations?user=SGjrwBwAAAAJ&hl=en">Google Scholar</a>.
+  </p>
   {% for publication in site.data.publications %}
   <div class="publication">
     <div class="publication-icon">📄</div>
