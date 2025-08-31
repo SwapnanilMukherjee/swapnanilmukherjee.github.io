@@ -19,3 +19,10 @@
   url: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105"
   paper: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105/86"
   code: "https://github.com/SwapnanilMukherjee/hate-speech-detection-with-transformers"
+
+- title: "FedTree: Federated Learning on Tabular Medical Data (Poster)"
+  authors: "Bhavesh Neekhra, Swapnanil Mukherjee, Vinayak Goswamy, Debayan Gupta"
+  venue: "4th ICGA Conference 2023"
+  url: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
+  code: "https://github.com/bhaveshneekhra/mlcb_23/tree/main"
+  project: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
