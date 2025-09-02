@@ -1,27 +1,66 @@
-- title: "NLKI: A lightweight Natural Language Knowledge Integration Framework for Improving Small VLMs in Commonsense VQA Tasks"
-  authors: "Aritra Dutta, Swapnanil Mukherjee, Deepanway Ghoshal, Somak Aditya"
-  venue: "EMNLP 2025 Findings"
-  url: "https://beingdutta.github.io/NLKI-Project-Page-EMNLP-2025-Findings/"
-  paper: "https://arxiv.org/pdf/2508.19724"
-  code: "https://github.com/beingdutta/NLKI-Lightweight-Natural-Language-Knowledge-Integration-Framework"
-  project: "https://beingdutta.github.io/NLKI-Project-Page-EMNLP-2025-Findings/"
+publications:
+  2025:
+    - title: "NLKI: A lightweight Natural Language Knowledge Integration Framework for Improving Small VLMs in Commonsense VQA Tasks"
+      authors:
+        - name: "Aritra Dutta"
+        - name: "Swapnanil Mukherjee"
+          isYou: true
+        - name: "Deepanway Ghoshal"
+        - name: "Somak Aditya"
+      venue: "EMNLP 2025 Findings"
+      year: 2025
+      description: "A lightweight framework for integrating natural language knowledge to improve small vision-language models in commonsense VQA tasks"
+      thumbnail: ""
+      links:
+        pdf: "https://arxiv.org/pdf/2508.19724"
+        code: "https://github.com/beingdutta/NLKI-Lightweight-Natural-Language-Knowledge-Integration-Framework"
+        project: "https://beingdutta.github.io/NLKI-Project-Page-EMNLP-2025-Findings/"
 
-- title: "Next-Gen Profiling of Tumor-resident Stem Cells using Machine Learning"
-  authors: "Debojyoti Chowdhury, Bhavesh Neekhra, Shreyansh Priyadarshi, Swapnanil Mukherjee, Debashruti Maity, Debayan Gupta, Shubhasis Haldar"
-  venue: "bioaRxiv (preprint)"
-  url: "https://www.biorxiv.org/content/10.1101/2023.11.24.568600v1"
-  paper: "https://www.biorxiv.org/content/biorxiv/early/2023/11/25/2023.11.24.568600.full.pdf"
+  2023:
+    - title: "Next-Gen Profiling of Tumor-resident Stem Cells using Machine Learning"
+      authors:
+        - name: "Debojyoti Chowdhury"
+        - name: "Bhavesh Neekhra"
+        - name: "Shreyansh Priyadarshi"
+        - name: "Swapnanil Mukherjee"
+          isYou: true
+        - name: "Debashruti Maity"
+        - name: "Debayan Gupta"
+        - name: "Shubhasis Haldar"
+      venue: "bioaRxiv (preprint)"
+      year: 2023
+      description: "Machine learning approaches for profiling tumor-resident stem cells"
+      thumbnail: ""
+      links:
+        pdf: "https://www.biorxiv.org/content/biorxiv/early/2023/11/25/2023.11.24.568600.full.pdf"
+        project: "https://www.biorxiv.org/content/10.1101/2023.11.24.568600v1"
 
-- title: "FedTree: Federated Learning on Tabular Medical Data [Poster]"
-  authors: "Bhavesh Neekhra, Swapnanil Mukherjee, Vinayak Goswamy, Debayan Gupta"
-  venue: "4th ICGA Conference 2023"
-  url: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
-  code: "https://github.com/bhaveshneekhra/mlcb_23/tree/main"
-  project: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
-  
-- title: "Application of Transformer-Based Language Models to Detect Hate Speech in Social Media"
-  authors: "Swapnanil Mukherjee, Sujit Das"
-  venue: "Journal of Computational and Cognitive Engineering (2021)"
-  url: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105"
-  paper: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105/86"
-  code: "https://github.com/SwapnanilMukherjee/hate-speech-detection-with-transformers"
+    - title: "FedTree: Federated Learning on Tabular Medical Data [Poster]"
+      authors:
+        - name: "Bhavesh Neekhra"
+        - name: "Swapnanil Mukherjee"
+          isYou: true
+        - name: "Vinayak Goswamy"
+        - name: "Debayan Gupta"
+      venue: "4th ICGA Conference 2023"
+      year: 2023
+      description: "Federated learning framework for tabular medical data analysis"
+      thumbnail: ""
+      links:
+        pdf: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
+        code: "https://github.com/bhaveshneekhra/mlcb_23/tree/main"
+
+  2021:
+    - title: "Application of Transformer-Based Language Models to Detect Hate Speech in Social Media"
+      authors:
+        - name: "Swapnanil Mukherjee"
+          isYou: true
+        - name: "Sujit Das"
+      venue: "Journal of Computational and Cognitive Engineering (2021)"
+      year: 2021
+      description: "Transformer-based approach for detecting hate speech in social media platforms"
+      thumbnail: ""
+      links:
+        pdf: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105/86"
+        code: "https://github.com/SwapnanilMukherjee/hate-speech-detection-with-transformers"
+        project: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105"

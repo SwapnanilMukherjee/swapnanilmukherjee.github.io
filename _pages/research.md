@@ -32,45 +32,63 @@ permalink: /research/
   <p> 
     For citation information, please check my <a href="https://scholar.google.com/citations?user=SGjrwBwAAAAJ&hl=en">Google Scholar</a>.
   </p>
-  {% for publication in site.data.publications %}
-  <div class="publication">
-    <div class="publication-icon">📄</div>
-    <div class="publication-content">
-      
-      {% if publication.url %}
-        <h3><a href="{{ publication.url }}" target="_blank" rel="noopener noreferrer">{{ publication.title }}</a></h3>
-      {% else %}
-        <h3>{{ publication.title }}</h3>
-      {% endif %}
-      
-      {% if publication.authors %}
-        <p class="authors">{{ publication.authors }}</p>
-      {% endif %}
-      
-      {% if publication.venue %}
-        <p class="venue"><i>{{ publication.venue }}</i></p>
-      {% endif %}
-      
-      <div class="publication-links">
-        {% if publication.paper %}
-          <a class="link-with-icon" href="{{ publication.paper }}" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>Paper</span>
-          </a>
-        {% endif %}
-        
-        {% if publication.code %}
-          <a class="link-with-icon" href="{{ publication.code }}" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><polyline points="17 8 21 12 17 16"/></svg><span>Code</span>
-          </a>
-        {% endif %}
-        
-        {% if publication.project %}
-          <a class="link-with-icon" href="{{ publication.project }}" target="_blank" rel="noopener noreferrer">
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"/><path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"/></svg><span>Project</span>
-          </a>
+  {% for year_data in site.data.publications.publications %}
+    {% assign year = year_data[0] %}
+    {% assign pubs = year_data[1] %}
+    
+    <h3>{{ year }}</h3>
+    
+    {% for pub in pubs %}
+    <div class="publication">
+      <div class="publication-icon">
+        {% if pub.thumbnail and pub.thumbnail != "" %}
+          <img src="{{ pub.thumbnail }}" alt="{{ pub.title }}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 8px;">
+        {% else %}
+          📄
         {% endif %}
       </div>
+      <div class="publication-content">
+        <h3>
+          {% if pub.links.project %}
+            <a href="{{ pub.links.project }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+          {% elsif pub.links.pdf %}
+            <a href="{{ pub.links.pdf }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+          {% else %}
+            {{ pub.title }}
+          {% endif %}
+        </h3>
+        <div class="authors">
+          {% for author in pub.authors %}
+            {% if author.isYou %}
+              <span class="author-me">{{ author.name }}</span>{% unless forloop.last %}, {% endunless %}
+            {% else %}
+              {{ author.name }}{% unless forloop.last %}, {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="venue"><i>{{ pub.venue }}</i></div>
+        {% if pub.description %}
+          <div class="description" style="font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem;">{{ pub.description }}</div>
+        {% endif %}
+        <div class="publication-links">
+          {% if pub.links.pdf %}
+            <a class="link-with-icon" href="{{ pub.links.pdf }}" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>Paper</span>
+            </a>
+          {% endif %}
+          {% if pub.links.code %}
+            <a class="link-with-icon" href="{{ pub.links.code }}" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><polyline points="17 8 21 12 17 16"/></svg><span>Code</span>
+            </a>
+          {% endif %}
+          {% if pub.links.project %}
+            <a class="link-with-icon" href="{{ pub.links.project }}" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"/><path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"/></svg><span>Project</span>
+            </a>
+          {% endif %}
+        </div>
+      </div>
     </div>
-  </div>
+    {% endfor %}
   {% endfor %}
 </div>
