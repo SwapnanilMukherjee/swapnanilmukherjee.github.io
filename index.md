@@ -4,7 +4,7 @@ layout: default
 
 <!-- Profile Section -->
 <div class="profile">
-  <img src="/assets/profile-image.jpg" alt="Profile photo" class="profile-image" loading="eager" decoding="async">
+  <img src="/assets/images/profile-image.jpg" alt="Profile photo" class="profile-image" loading="eager" decoding="async">
   <div class="profile-info">
     <h1>Swapnanil Mukherjee</h1>
     <p class="title">Ashoka University</p>

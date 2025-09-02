@@ -82,7 +82,7 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
 .publication-content h3 a { color: var(--text); text-decoration: none; }
 .publication-content h3 a:hover { text-decoration: underline; }
 .authors { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.35rem; }
-.author-me { font-weight: bold; }
+.author-me { text-decoration: bold; }
 .venue { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.35rem; }
 .publication-links { display: flex; gap: 0.7rem; font-size: 0.9rem; }
 .publication-links a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; }

@@ -10,7 +10,7 @@ publications:
       venue: "EMNLP 2025 Findings"
       year: 2025
       description: "A lightweight framework for integrating natural language knowledge to improve small vision-language models in commonsense VQA tasks"
-      thumbnail: ""
+      thumbnail: "/assets/images/publications/nlki.jpg"
       links:
         pdf: "https://arxiv.org/pdf/2508.19724"
         code: "https://github.com/beingdutta/NLKI-Lightweight-Natural-Language-Knowledge-Integration-Framework"
@@ -30,7 +30,7 @@ publications:
       venue: "bioaRxiv (preprint)"
       year: 2023
       description: "Machine learning approaches for profiling tumor-resident stem cells"
-      thumbnail: ""
+      thumbnail: "/assets/images/publications/aiscan.jpg"
       links:
         pdf: "https://www.biorxiv.org/content/biorxiv/early/2023/11/25/2023.11.24.568600.full.pdf"
         project: "https://www.biorxiv.org/content/10.1101/2023.11.24.568600v1"
@@ -45,7 +45,7 @@ publications:
       venue: "4th ICGA Conference 2023"
       year: 2023
       description: "Federated learning framework for tabular medical data analysis"
-      thumbnail: ""
+      thumbnail: "/assets/images/publications/fedtree.jpg"
       links:
         pdf: "https://bhaveshneekhra.github.io/about/ICGA_2023.pdf"
         code: "https://github.com/bhaveshneekhra/mlcb_23/tree/main"
@@ -59,7 +59,7 @@ publications:
       venue: "Journal of Computational and Cognitive Engineering (2021)"
       year: 2021
       description: "Transformer-based approach for detecting hate speech in social media platforms"
-      thumbnail: ""
+      thumbnail: "/assets/images/publications/jcce.png"
       links:
         pdf: "https://ojs.bonviewpress.com/index.php/JCCE/article/view/105/86"
         code: "https://github.com/SwapnanilMukherjee/hate-speech-detection-with-transformers"
