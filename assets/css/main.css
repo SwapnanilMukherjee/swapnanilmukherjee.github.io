@@ -40,9 +40,9 @@ nav a { text-decoration: none; color: var(--muted); transition: color 0.2s ease;
 nav a:hover, nav a.active { color: var(--text); }
 
 /* Mobile nav */
-.nav-toggle { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: transparent; cursor: pointer; align-items: center; justify-content: center; }
-.nav-toggle-bar { display: block; width: 18px; height: 2px; background: var(--text); }
-.nav-toggle-bar + .nav-toggle-bar { margin-top: 4px; }
+.nav-toggle { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: transparent; cursor: pointer; align-items: center; justify-content: center; flex-direction: column; }
+.nav-toggle-bar { display: block; width: 16px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.2s ease; }
+.nav-toggle-bar + .nav-toggle-bar { margin-top: 3px; }
 
 /* Typography */
 h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.01em; }
@@ -124,8 +124,25 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
   .nav-toggle { display: inline-flex; }
   .nav-links { display: none; flex-direction: column; gap: 0.75rem; width: 100%; padding-top: 0.5rem; }
   .nav-links.open { display: flex; }
-  nav ul li { text-align: center; }
-  .profile { flex-direction: column; text-align: center; align-items: center; }
+  nav ul li { text-align: left; }
+  .profile { 
+    display: grid; 
+    grid-template-columns: auto 1fr; 
+    gap: 1.5rem; 
+    align-items: start; 
+    text-align: left;
+  }
+  .profile-info { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    min-height: 100px; 
+  }
+  .social-links { 
+    justify-content: flex-start; 
+    gap: 0.25rem; 
+    margin-top: 0.5rem;
+  }
   h1 { font-size: 1.65rem; }
   h2 { font-size: 1.25rem; }
 }
