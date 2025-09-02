@@ -95,7 +95,7 @@ layout: default
           </p>
           <p class="venue"><i>{{ pub.venue }}</i></p>
           <div class="publication-links">
-            {% if pub.links.pdf %}<a class="link-with-icon" href="{{ pub.links.pdf }}"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>Paper</span></a>{% endif %}
+            {% if pub.links.pdf %}<a class="link-with-icon" href="{{ pub.links.pdf }}"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>PDF</span></a>{% endif %}
             {% if pub.links.code %}<a class="link-with-icon" href="{{ pub.links.code }}" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="7 8 3 12 7 16"/><polyline points="17 8 21 12 17 16"/></svg><span>Code</span></a>{% endif %}
             {% if pub.links.project %}<a class="link-with-icon" href="{{ pub.links.project }}" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 1 0-7l1-1a5 5 0 0 1 7 7l-1 1"/><path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1"/></svg><span>Project</span></a>{% endif %}
           </div>

@@ -67,13 +67,10 @@ permalink: /research/
           {% endfor %}
         </div>
         <div class="venue"><i>{{ pub.venue }}</i></div>
-        {% if pub.description %}
-          <div class="description" style="font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem;">{{ pub.description }}</div>
-        {% endif %}
         <div class="publication-links">
           {% if pub.links.pdf %}
             <a class="link-with-icon" href="{{ pub.links.pdf }}" target="_blank" rel="noopener noreferrer">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>Paper</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/></svg><span>PDF</span>
             </a>
           {% endif %}
           {% if pub.links.code %}
