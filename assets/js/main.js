@@ -4,21 +4,35 @@
   var toggle = nav && nav.querySelector('.nav-toggle');
   var links = nav && nav.querySelector('.nav-links');
   if (toggle && links) {
+    var closeNavbar = function() {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
     toggle.addEventListener('click', function () {
       var open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
     });
 
-    // Handle close button clicks (pseudo-element)
-    links.addEventListener('click', function (e) {
+    // Close navbar when clicking outside or on nav links
+    document.addEventListener('click', function(e) {
       if (links.classList.contains('open')) {
-        var rect = links.getBoundingClientRect();
-        var clickY = e.clientY - rect.top;
-        // Check if click is in the top area where the close button is (roughly first 60px)
-        if (clickY <= 60) {
-          links.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
+        if (!nav.contains(e.target)) {
+          closeNavbar();
         }
+      }
+    });
+
+    // Close navbar when clicking on navigation links
+    var navItems = links.querySelectorAll('a');
+    navItems.forEach(function(item) {
+      item.addEventListener('click', closeNavbar);
+    });
+
+    // Handle escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && links.classList.contains('open')) {
+        closeNavbar();
       }
     });
   }

@@ -210,6 +210,9 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
   .authors { font-size: 0.85rem; }
   .venue { font-size: 0.85rem; }
   .publication-links { font-size: 0.85rem; }
+  .profile p { font-size: 0.9rem; }
+  .profile h1 { font-size: 1.4rem; }
+  .profile h2 { font-size: 1.1rem; }
 }
 
 /* Reduced motion */
