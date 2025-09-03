@@ -91,7 +91,7 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
 /* News */
 .news-item { display: flex; gap: 1rem; margin-bottom: 0.75rem; }
 .news-date { font-size: 0.9rem; color: var(--muted); width: 90px; flex-shrink: 0; }
-.news-content { font-size: 0.9rem; }
+.news-content { font-size: 0.95rem; }
 
 /* Sections */
 .section { margin-bottom: 2.5rem; }
@@ -214,6 +214,7 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
   .profile h1 { font-size: 1.4rem; }
   .profile h2 { font-size: 1.1rem; }
 }
+.news-content { font-size: 0.9rem; }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
