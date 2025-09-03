@@ -67,13 +67,11 @@ layout: default
     {% for pub in pubs %}
       {% if recent_pubs < 2 %}
       <div class="publication">
-        <div class="publication-icon">
-          {% if pub.thumbnail and pub.thumbnail != "" %}
-            <img src="{{ pub.thumbnail }}" alt="{{ pub.title }}" style="width: 44px; height: 44px; object-fit: cover; border-radius: 8px;">
-          {% else %}
-            📄
-          {% endif %}
-        </div>
+        {% if pub.thumbnail and pub.thumbnail != "" %}
+          <img src="{{ pub.thumbnail }}" alt="{{ pub.title }}" class="publication-thumbnail">
+        {% else %}
+          <div class="publication-icon">📄</div>
+        {% endif %}
         <div class="publication-content">
           <h3>
             {% if pub.links.project %}
