@@ -8,6 +8,19 @@
       var open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
     });
+
+    // Handle close button clicks (pseudo-element)
+    links.addEventListener('click', function (e) {
+      if (links.classList.contains('open')) {
+        var rect = links.getBoundingClientRect();
+        var clickY = e.clientY - rect.top;
+        // Check if click is in the top area where the close button is (roughly first 60px)
+        if (clickY <= 60) {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
   }
 
   // Simple lightbox for gallery images
