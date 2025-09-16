@@ -3,7 +3,19 @@ document.addEventListener('DOMContentLoaded', function() {
   var nav = document.querySelector('nav');
   var toggle = nav && nav.querySelector('.nav-toggle');
   var links = nav && nav.querySelector('.nav-links');
+  
+  // Create close button
+  if (links && !links.querySelector('.nav-close')) {
+    var closeBtn = document.createElement('button');
+    closeBtn.className = 'nav-close';
+    closeBtn.innerHTML = '✕';
+    closeBtn.setAttribute('aria-label', 'Close navigation');
+    links.insertBefore(closeBtn, links.firstChild);
+  }
+  
   if (toggle && links) {
+    var closeBtn = links.querySelector('.nav-close');
+    
     var closeNavbar = function() {
       links.classList.remove('open');
       toggle.setAttribute('aria-expanded', 'false');
@@ -13,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
       var open = links.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
     });
+    
+    // Close button click handler
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeNavbar);
+    }
 
     // Close navbar when clicking outside or on nav links
     document.addEventListener('click', function(e) {

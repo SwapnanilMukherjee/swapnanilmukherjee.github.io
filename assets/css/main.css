@@ -130,9 +130,8 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
   .publication-thumbnail { width: 120px; height: 85px; }
   .publication-icon { width: 120px; height: 85px; font-size: 1rem; }
   nav ul li { text-align: left; }
-  .nav-links.open::before { 
-    content: "✕"; 
-    display: block; 
+  .nav-close { 
+    display: none; 
     width: 40px; 
     height: 40px; 
     border: 1px solid var(--border); 
@@ -144,6 +143,9 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
     margin-bottom: 0.5rem; 
     font-size: 18px; 
     color: var(--text); 
+  }
+  .nav-links.open .nav-close { 
+    display: block; 
   }
   .nav-close { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: transparent; cursor: pointer; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 0.5rem; }
   .nav-links.open .nav-close { display: inline-flex; }
