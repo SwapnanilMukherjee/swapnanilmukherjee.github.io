@@ -44,6 +44,9 @@ nav a:hover, nav a.active { color: var(--text); }
 .nav-toggle-bar { display: block; width: 16px; height: 2px; background: var(--text); border-radius: 1px; transition: all 0.2s ease; }
 .nav-toggle-bar + .nav-toggle-bar { margin-top: 3px; }
 
+/* Mobile nav close button - hidden by default */
+.nav-close { display: none; }
+
 /* Typography */
 h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.01em; }
 h2 { font-size: 1.4rem; font-weight: 500; margin-bottom: 1rem; }
@@ -121,34 +124,60 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
 /* Responsive */
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  nav .container { gap: 0.75rem; }
+  nav .container { gap: 0.75rem; position: relative; }
   .nav-toggle { display: inline-flex; }
-  .nav-links { display: none; flex-direction: column; gap: 0.75rem; width: 100%; padding-top: 0.5rem; }
-  .nav-links.open { display: flex; }
+  .nav-links { 
+    display: none; 
+    flex-direction: column; 
+    gap: 0.75rem; 
+    width: 100%; 
+    padding-top: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: saturate(180%) blur(8px);
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  .nav-links.open { 
+    display: flex; 
+    transform: translateY(0);
+    opacity: 1;
+  }
   .nav-links.open ~ .nav-toggle { display: none; }
   .nav-toggle[aria-expanded="true"] { display: none; }
-  .publication-thumbnail { width: 120px; height: 85px; }
-  .publication-icon { width: 120px; height: 85px; font-size: 1rem; }
-  nav ul li { text-align: left; }
+  
+  /* Close button positioning in top right */
   .nav-close { 
-    display: none; 
+    display: none;
+    position: absolute;
+    top: -60px;
+    right: 0;
     width: 40px; 
     height: 40px; 
     border: 1px solid var(--border); 
     border-radius: 8px; 
-    background: transparent; 
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: saturate(180%) blur(8px);
     cursor: pointer; 
-    text-align: center; 
-    line-height: 38px; 
-    margin-bottom: 0.5rem; 
     font-size: 18px; 
-    color: var(--text); 
+    color: var(--text);
+    align-items: center;
+    justify-content: center;
   }
   .nav-links.open .nav-close { 
-    display: block; 
+    display: flex; 
   }
-  .nav-close { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: transparent; cursor: pointer; align-items: center; justify-content: center; flex-direction: column; margin-bottom: 0.5rem; }
-  .nav-links.open .nav-close { display: inline-flex; }
+  
+  .publication-thumbnail { width: 120px; height: 85px; }
+  .publication-icon { width: 120px; height: 85px; font-size: 1rem; }
+  nav ul li { text-align: left; }
   .profile { 
     display: grid; 
     grid-template-columns: 100px 1fr; 
