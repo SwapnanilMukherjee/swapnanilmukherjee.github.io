@@ -1,4 +1,4 @@
-(function () {
+document.addEventListener('DOMContentLoaded', function() {
   // Mobile navigation toggle
   var nav = document.querySelector('nav');
   var toggle = nav && nav.querySelector('.nav-toggle');
@@ -96,4 +96,4 @@
       if (e.key === 'Escape') close();
     });
   }
-})();
+});
