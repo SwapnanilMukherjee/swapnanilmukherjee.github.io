@@ -46,11 +46,27 @@ layout: default
 <div class="section">
   <h2>About Me</h2>
   <p>I am a final year undergraduate student at <a href="https://wwww.ashoka.edu.in">Ashoka University</a>. My research interests lie in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.</p>
-  <p>I am currently an intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab</a> at IIIT Hyderabad where I am exploring multimodal representational alignment in collaboration with <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank"> Microsoft Research India</a>. Previously, I have worked at <a href="https://www.sarvam.ai/">Sarvam</a>, <a href="https://www.ashoka.edu.in/page/koita-centre-for-digital-health-at-ashoka/" target="_blank">KCDH-Ashoka</a>, and the <a href="https://www.ashoka.edu.in/about-mphasis-lab/" target="_blank">Mphasis AI & Applied Tech Lab</a> at Ashoka. I am currently pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">neurosymbolic reasoning</a> supervised by <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a href="/assets/CV.pdf">CV</a>, or look at my <a href="/research">research</a>. 
+  <p>I am currently an intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab</a> at IIIT Hyderabad where I am investigating modality bias and preference in large multimodal models (MLLMs)  <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank"> Microsoft Research India</a>. Previously, I have worked at <a href="https://www.sarvam.ai/">Sarvam</a>, <a href="https://www.ashoka.edu.in/page/koita-centre-for-digital-health-at-ashoka/" target="_blank">KCDH-Ashoka</a>, and the <a href="https://www.ashoka.edu.in/about-mphasis-lab/" target="_blank">Mphasis AI & Applied Tech Lab</a> at Ashoka. I am currently pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">neurosymbolic reasoning</a> supervised by <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a href="/assets/CV.pdf">CV</a>, or look at my <a href="/research">research</a>. 
   </p>
   <p>Aside from work, there aren't many things that I do (which I am slowly trying to change). But sometimes, when I do find the motivation, I enjoy obsessing over frames. I am quite into comic universes, have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, and I try to swim sometimes. Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
   <p class="note"> <b>[NOTE]</b> I am also actively looking for PhD positions starting Fall 2026 in the aforementioned research areas. If there are any openings and I might be a good fit for your group, do let me know!</p>
 </div>
+
+
+<!-- Recent News -->
+<div class="section">
+  <div class="section-header">
+    <h2>Recent News</h2>
+  </div>
+  
+  {% for item in site.data.news limit:5 %}
+  <div class="news-item">
+    <span class="news-date">{{ item.date }}</span>
+    <span class="news-content">{{ item.content }}</span>
+  </div>
+  {% endfor %}
+</div>
+
 
 <!-- Recent Publications -->
 <div class="section">
@@ -102,19 +118,5 @@ layout: default
       {% assign recent_pubs = recent_pubs | plus: 1 %}
       {% endif %}
     {% endfor %}
-  {% endfor %}
-</div>
-
-<!-- Recent News -->
-<div class="section">
-  <div class="section-header">
-    <h2>Recent News</h2>
-  </div>
-  
-  {% for item in site.data.news limit:5 %}
-  <div class="news-item">
-    <span class="news-date">{{ item.date }}</span>
-    <span class="news-content">{{ item.content }}</span>
-  </div>
   {% endfor %}
 </div>

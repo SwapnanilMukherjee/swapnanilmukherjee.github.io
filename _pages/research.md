@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ResearchIndia's National AIDS Control Organization (NACO). My role involved setting up the complete data cleaning and processing pipeline, experimenting with different models, and developing the first few iterations of the forecasting tool. We presented our initial results to senior NACO executives. The method is now being adopted by NACO for country-wide forecasting of more than 17 HIV drugs, which will optimize availability and positively impact lakhs of patients living with HIV
+title: Research
 permalink: /research/
 ---
 
