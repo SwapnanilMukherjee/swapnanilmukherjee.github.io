@@ -250,10 +250,9 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
 /* Last updated */
 .last-updated {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--muted);
   padding: 1.5rem 0;
-  border-top: 1px solid var(--border);
 }
 
 /* Reduced motion */
