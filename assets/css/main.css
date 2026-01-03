@@ -254,8 +254,6 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
   color: var(--muted);
   padding: 1.5rem 0;
   border-top: 1px solid var(--border);
-  margin: 0 auto;
-  max-width: 900px;
 }
 
 /* Reduced motion */
