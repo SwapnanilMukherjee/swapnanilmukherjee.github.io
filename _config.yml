@@ -11,6 +11,9 @@ linkedin_username: swapnanil-mukherjee-9392641b4/
 twitter_username: swapnanil_12
 bluesky_username: swapnanil.bsky.social
 
+# Google Analytics - Add your GA4 Measurement ID (e.g., G-XXXXXXXXXX)
+google_analytics: 
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
