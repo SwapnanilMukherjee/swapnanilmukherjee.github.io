@@ -6,7 +6,7 @@ permalink: /miscellaneous/
 
 # Miscellaneous
 
-<!-- ## Teaching
+## Teaching
 
 {% for item in site.data.teaching %}
 <div class="item">
@@ -14,7 +14,7 @@ permalink: /miscellaneous/
   <p class="meta">{{ item.role }} • {{ item.semester }}</p>
   <p class="description">{{ item.description }}</p>
 </div>
-{% endfor %} -->
+{% endfor %}
 
 ## Service
 
