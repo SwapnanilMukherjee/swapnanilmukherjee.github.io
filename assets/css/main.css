@@ -82,33 +82,42 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 /* People badges */
 .people-badges {
   display: inline-flex !important;
-  flex-wrap: wrap !important;
-  gap: 0.4rem !important;
-  margin: 0 0.3rem !important;
+  flex-wrap: nowrap !important;
+  gap: 0.18rem !important;
+  margin: 0 0.05rem !important;
+  vertical-align: middle !important;
+  line-height: 1 !important;
 }
 
 .people-badge {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 1.5rem !important;
-  height: 1.5rem !important;
+  width: 1.15rem !important;
+  height: 1.15rem !important;
   border-radius: 50% !important;
-  background: #1a1a1a !important;
+  background: #111827 !important;
   text-decoration: none !important;
-  transition: all 0.2s ease !important;
+  transition: none !important;
   border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  font-size: 0.75rem !important;
+  line-height: 1 !important;
 }
 
 .people-badge:hover {
-  background: #000 !important;
-  transform: scale(1.1) !important;
+  transform: none !important;
+  background: #0b0f14 !important;
 }
 
 .badge-number {
-  font-size: 0.65rem !important;
+  font-size: 0.6rem !important;
   font-weight: 700 !important;
   color: #fff !important;
+  display: inline-block !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 /* Publication */
