@@ -7,7 +7,7 @@ layout: default
   <img src="/assets/images/profile-image2.JPG" alt="Profile photo" class="profile-image" loading="eager" decoding="async">
   <div class="profile-info">
     <h1>Swapnanil Mukherjee</h1>
-    <p class="title">Ashoka University</p>
+    <p class="title">Microsoft Research India</p>
     <p class="email">{{ site.email }}</p>
     
     <div class="social-links">
@@ -45,10 +45,16 @@ layout: default
 <!-- Bio Section -->
 <div class="section">
   <h2>About Me</h2>
-  <p>I am a final year undergraduate student at <a href="https://wwww.ashoka.edu.in">Ashoka University</a>. My research interests lie in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.</p>
-  <p>I am currently a research intern at <a href="https://precog.iiit.ac.in/" target="_blank">Precog, IIIT Hyderabad</a> working under <a href="https://precog.iiit.ac.in/bio/">Prof. Ponnurangam Kumaraguru</a> and <a href="https://www.microsoft.com/en-us/research/people/taganu/">Tanuja Ganu</a> (<a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank">Microsoft Research India</a>) to  investigate modality bias and preference in large multimodal models (MLLMs). Previously, I was an intern at <a href="https://www.sarvam.ai/">Sarvam</a>, <a href="https://www.ashoka.edu.in/page/koita-centre-for-digital-health-at-ashoka/" target="_blank">KCDH-Ashoka</a>, and the <a href="https://www.ashoka.edu.in/about-mphasis-lab/" target="_blank">Mphasis AI & Applied Tech Lab</a> at Ashoka, and have worked with the <a href="https://adityasomak.github.io/research/">TR^2AIL Lab</a> under <a href="https://adityasomak.github.io/#about">Prof. Somak Aditya</a>. I am also currently pursuing my undergraduate thesis on <a href="https://arxiv.org/abs/2209.07662" target="_blank">verifiable multimodal reasoning</a> supervised by <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a href="/assets/CV.pdf">CV</a>, or look at my <a href="/research">research</a>. 
+  <p>I am a <a href="https://www.microsoft.com/en-us/research/people/t-swapnanilm/">Research Fellow</a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research India</a> working with <a href="https://www.microsoft.com/en-us/research/people/taganu/">Tanuja Ganu</a> and <a href="https://www.microsoft.com/en-us/research/people/vineethn/">Vineeth N Balasubramaniam</a>. I graduated with a Bachelor's in Computer Science from <a href="https://wwww.ashoka.edu.in">Ashoka University</a> where I was fortunate to have worked with some amazing people(</p>
+  <div class="people-badges" aria-label="Notable collaborators">
+    <a href="https://debayangupta.com/" class="people-badge" target="_blank" rel="noopener noreferrer"><span class="badge-number">1</span>Debayan Gupta</a>
+    <a href="https://www.linkedin.com/in/bhaveshneekhra/" class="people-badge" target="_blank" rel="noopener noreferrer"><span class="badge-number">2</span>Bhavesh Neekhra</a>
+    <a href="https://www.linkedin.com/in/lipika-dey-3381713/" class="people-badge" target="_blank" rel="noopener noreferrer"><span class="badge-number">3</span>Lipika Dey</a>
+  </div>).
+  <p>My current research interests are in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.</p>
+  <p>Previously, I was research intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab, IIIT Hyderabad</a> where I worked with <a href="https://precog.iiit.ac.in/bio/">Prof. Ponnurangam Kumaraguru</a> and Tanuja Ganu on benchmarking modality bias and in large omni/multi-modal models (MLLMs). I have also worked with the <a href="https://adityasomak.github.io/research/">TR^2AIL Lab</a> under <a href="https://adityasomak.github.io/#about">Prof. Somak Aditya</a>, interned at <a href="https://www.sarvam.ai/">Sarvam</a>, <a href="https://www.ashoka.edu.in/page/koita-centre-for-digital-health-at-ashoka/" target="_blank">KCDH-Ashoka</a>, and the <a href="https://www.ashoka.edu.in/about-mphasis-lab/" target="_blank">Mphasis AI & Applied Tech Lab</a> at Ashoka. My undergraduate thesis was on <a href="https://arxiv.org/abs/2209.07662" target="_blank">verifiable multimodal reasoning</a> supervised by <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a href="/assets/CV.pdf">CV</a>, or look at my <a href="/research">research</a>. 
   </p>
-  <p>Aside from work, there aren't many things that I do (which I am slowly trying to change). But sometimes, when I do find the motivation, I enjoy obsessing over frames. I am quite into comic universes, have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, and I try to swim sometimes. Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
+  <p>Aside from work, I occassionally enjoy obsessing over finding the perfect frame. I also enjoy lifting, have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, and have recently taken an interest in climbing . Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
   
   <!-- <p class="note"> <b>[NOTE]</b> I am also actively looking for PhD positions starting Fall 2026 in the aforementioned research areas. If there are any openings and I might be a good fit for your group, do let me know!</p> -->
 </div>
@@ -60,7 +66,7 @@ layout: default
     <h2>Recent News</h2>
   </div>
   
-  {% for item in site.data.news limit:5 %}
+  {% for item in site.data.news limit:3 %}
   <div class="news-item">
     <span class="news-date">{{ item.date }}</span>
     <span class="news-content">{{ item.content }}</span>
