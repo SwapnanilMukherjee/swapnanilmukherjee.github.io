@@ -54,7 +54,7 @@ h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
 p { font-size: 0.95rem; margin-bottom: 0.97rem; color: var(--muted); }
 p a {color: var(--muted); text-decoration: underline dotted;}
 p a:hover {color: var(--text); text-decoration: underline dotted; transition: 100ms; transition-timing-function: ease-in-out;}
-p b { color: var(--muted); font-weight: 600; }
+p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 
 /* Profile */
 .profile { display: flex; gap: 2rem; margin-bottom: 2rem; align-items: flex-start; }
@@ -80,33 +80,34 @@ p b { color: var(--muted); font-weight: 600; }
 
 /* People badges */
 .people-badges {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0 0.3rem;
+  display: inline-flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.4rem !important;
+  margin: 0 0.3rem !important;
 }
 
 .people-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background: #333;
-  text-decoration: none;
-  transition: all 0.2s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border-radius: 50% !important;
+  background: #1a1a1a !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  border: none !important;
 }
 
 .people-badge:hover {
-  background: #111;
-  transform: scale(1.1);
+  background: #000 !important;
+  transform: scale(1.1) !important;
 }
 
 .badge-number {
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
 }
 
 /* Publication */
