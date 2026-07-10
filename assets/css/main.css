@@ -81,42 +81,43 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 
 /* People badges */
 .people-badges {
-  display: inline-flex !important;
-  flex-wrap: nowrap !important;
-  gap: 0.08rem !important;
-  margin: 0 0.02rem 0 -0.12rem !important; /* pull slightly left to remove gap after '(' */
-  vertical-align: middle !important;
-  line-height: 1 !important;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 0.04rem;
+  margin: 0 0 0 -0.06rem; /* pull left to remove gap after '(' */
+  vertical-align: middle;
+  line-height: 1;
 }
 
 .people-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 1.05rem !important;
-  height: 1.05rem !important;
-  border-radius: 50% !important;
-  background: var(--muted) !important; /* match bold text color */
-  text-decoration: none !important;
-  transition: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  font-size: 0.65rem !important;
-  line-height: 1 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--muted); /* match bold text color */
+  text-decoration: none;
+  transition: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  font-size: 0.6rem;
+  line-height: 1;
 }
 
 .people-badge:hover {
-  background: color-mix(in srgb, var(--muted) 75%, black 25%) !important;
+  background-color: var(--muted);
 }
 
 .badge-number {
-  font-size: 0.55rem !important;
-  font-weight: 700 !important;
-  color: var(--bg) !important; /* contrast against muted bg */
-  display: inline-block !important;
-  width: 100% !important;
-  text-align: center !important;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--bg); /* contrast against muted bg */
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 
 /* Publication */
