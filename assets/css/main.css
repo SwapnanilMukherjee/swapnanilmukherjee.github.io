@@ -83,8 +83,8 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 .people-badges {
   display: inline-flex !important;
   flex-wrap: nowrap !important;
-  gap: 0.18rem !important;
-  margin: 0 0.05rem !important;
+  gap: 0.08rem !important;
+  margin: 0 0.02rem 0 -0.12rem !important; /* pull slightly left to remove gap after '(' */
   vertical-align: middle !important;
   line-height: 1 !important;
 }
@@ -93,28 +93,27 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 1.15rem !important;
-  height: 1.15rem !important;
+  width: 1.05rem !important;
+  height: 1.05rem !important;
   border-radius: 50% !important;
-  background: #111827 !important;
+  background: var(--muted) !important; /* match bold text color */
   text-decoration: none !important;
   transition: none !important;
   border: none !important;
   box-shadow: none !important;
   padding: 0 !important;
-  font-size: 0.75rem !important;
+  font-size: 0.65rem !important;
   line-height: 1 !important;
 }
 
 .people-badge:hover {
-  transform: none !important;
-  background: #0b0f14 !important;
+  background: color-mix(in srgb, var(--muted) 75%, black 25%) !important;
 }
 
 .badge-number {
-  font-size: 0.6rem !important;
+  font-size: 0.55rem !important;
   font-weight: 700 !important;
-  color: #fff !important;
+  color: var(--bg) !important; /* contrast against muted bg */
   display: inline-block !important;
   width: 100% !important;
   text-align: center !important;
