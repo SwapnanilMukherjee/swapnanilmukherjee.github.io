@@ -109,13 +109,7 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 
 /* render commas between badges */
 .people-badge:not(:first-child)::before {
-  content: ",";
-  color: var(--muted);
-  display: inline-block;
-  margin: 0 0.18rem;
-  font-size: 0.92rem;
-  line-height: 1;
-  vertical-align: middle;
+  /* removed: commas are now inserted in the HTML for reliable placement */
 }
 
 .people-badge:hover {
