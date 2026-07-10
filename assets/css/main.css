@@ -83,8 +83,8 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 .people-badges {
   display: inline-flex;
   flex-wrap: nowrap;
-  gap: 0.04rem;
-  margin: 0 0 0 -0.06rem; /* pull left to remove gap after '(' */
+  gap: 0.28rem; /* slightly larger gap between tiles */
+  margin: 0 0 0 -0.06rem; /* keep badges snug after '(' */
   vertical-align: middle;
   line-height: 1;
 }
@@ -105,6 +105,17 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
   padding: 0;
   font-size: 0.6rem;
   line-height: 1;
+}
+
+/* render commas between badges */
+.people-badge:not(:first-child)::before {
+  content: ",";
+  color: var(--muted);
+  display: inline-block;
+  margin: 0 0.18rem;
+  font-size: 0.92rem;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .people-badge:hover {

@@ -47,7 +47,7 @@ layout: default
   <h2>About Me</h2>
   <p>I am a <a href="https://www.microsoft.com/en-us/research/people/t-swapnanilm/">Research Fellow</a> at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/">Microsoft Research India</a> working with <a href="https://www.microsoft.com/en-us/research/people/taganu/">Tanuja Ganu</a> and <a href="https://www.microsoft.com/en-us/research/people/vineethn/">Vineeth N Balasubramaniam</a>. I graduated with a Bachelor's in Computer Science from <a href="https://wwww.ashoka.edu.in">Ashoka University</a> where I was fortunate to have worked with some amazing people (
     <span class="people-badges" aria-label="Notable collaborators">
-      <a href="https://debayangupta.com/" class="people-badge" target="_blank" rel="noopener noreferrer" title="Debayan Gupta"><span class="badge-number">1</span></a>
+      <a href="https://debayangupta.com/" class="people-badge" target="_blank" rel="noopener noreferrer" title="Debayan Gupta"><span class="badge-number">1</span></a>,
       <a href="https://www.linkedin.com/in/bhaveshneekhra/" class="people-badge" target="_blank" rel="noopener noreferrer" title="Bhavesh Neekhra"><span class="badge-number">2</span></a>
       <a href="https://www.linkedin.com/in/lipika-dey-3381713/" class="people-badge" target="_blank" rel="noopener noreferrer" title="Lipika Dey"><span class="badge-number">3</span></a>
     </span>
