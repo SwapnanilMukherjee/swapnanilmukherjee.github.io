@@ -78,10 +78,47 @@ p a:hover {color: var(--text); text-decoration: underline dotted; transition: 10
 .link-with-icon svg { width: 16px; height: 16px; flex: 0 0 16px; }
 
 /* People badges */
-.people-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.2rem 0 1rem; }
-.people-badge { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.35rem 0.7rem; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s ease; }
-.people-badge:hover { transform: translateY(-1px); border-color: var(--primary); background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-.badge-number { display: inline-flex; align-items: center; justify-content: center; width: 1.2rem; height: 1.2rem; border-radius: 999px; background: var(--primary); color: #fff; font-size: 0.75rem; font-weight: 700; }
+.people-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.2rem 0 1rem;
+}
+
+.people-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  padding: 0.35rem 0.7rem !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 999px !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  text-decoration: none !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.people-badge:hover {
+  transform: translateY(-1px);
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.badge-number {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  border-radius: 999px !important;
+  background: var(--primary) !important;
+  color: #fff !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+}
 
 /* Publication */
 .publication { display: flex; gap: 1.25rem; margin-bottom: 1.5rem; align-items: center; }

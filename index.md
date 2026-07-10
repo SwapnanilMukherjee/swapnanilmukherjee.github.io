@@ -7,7 +7,7 @@ layout: default
   <img src="/assets/images/profile-image2.JPG" alt="Profile photo" class="profile-image" loading="eager" decoding="async">
   <div class="profile-info">
     <h1>Swapnanil Mukherjee</h1>
-    <p class="title">Microsoft Research India</p>
+    <p class="title">Microsoft Research</p>
     <p class="email">{{ site.email }}</p>
     
     <div class="social-links">
@@ -50,8 +50,7 @@ layout: default
     <a href="https://debayangupta.com/" class="people-badge" target="_blank" rel="noopener noreferrer"><span class="badge-number">1</span>Debayan Gupta</a>
     <a href="https://www.linkedin.com/in/bhaveshneekhra/" class="people-badge" target="_blank" rel="noopener noreferrer"><span class="badge-number">2</span>Bhavesh Neekhra</a>
     <a href="https://www.linkedin.com/in/lipika-dey-3381713/" class="people-badge" target="_blank" rel="noopener noreferrer"><span class="badge-number">3</span>Lipika Dey</a>
-  </div>).
-  <p>My current research interests are in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.</p>
+  </div>). My current research interests are in <b>multimodal AI</b>, problems at the <b>intersection of vision and language</b>, <b>commonsense abilities</b> in foundation models, and <b>reasoning</b>.
   <p>Previously, I was research intern at the <a href="https://precog.iiit.ac.in/" target="_blank">Precog Lab, IIIT Hyderabad</a> where I worked with <a href="https://precog.iiit.ac.in/bio/">Prof. Ponnurangam Kumaraguru</a> and Tanuja Ganu on benchmarking modality bias and in large omni/multi-modal models (MLLMs). I have also worked with the <a href="https://adityasomak.github.io/research/">TR^2AIL Lab</a> under <a href="https://adityasomak.github.io/#about">Prof. Somak Aditya</a>, interned at <a href="https://www.sarvam.ai/">Sarvam</a>, <a href="https://www.ashoka.edu.in/page/koita-centre-for-digital-health-at-ashoka/" target="_blank">KCDH-Ashoka</a>, and the <a href="https://www.ashoka.edu.in/about-mphasis-lab/" target="_blank">Mphasis AI & Applied Tech Lab</a> at Ashoka. My undergraduate thesis was on <a href="https://arxiv.org/abs/2209.07662" target="_blank">verifiable multimodal reasoning</a> supervised by <a href="https://www.ashoka.edu.in/profile/debayan-gupta/" target="_blank">Prof. Debayan Gupta</a> (Ashoka University) and <a href="https://adityasomak.github.io/#about" target="_blank">Prof. Somak Aditya</a> (IIT Kharagpur). For more details, check out my <a href="/assets/CV.pdf">CV</a>, or look at my <a href="/research">research</a>. 
   </p>
   <p>Aside from work, I occassionally enjoy obsessing over finding the perfect frame. I also enjoy lifting, have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> minutes, and have recently taken an interest in climbing . Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
