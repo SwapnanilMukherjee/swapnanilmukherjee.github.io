@@ -55,7 +55,7 @@ layout: default
   </p>
   <p>Aside from work, I occassionally enjoy obsessing over finding the perfect frame <span role="img" aria-label="camera">📷</span>. I also enjoy lifting <span role="img" aria-label="weightlifter">🏋️</span>, have an alarming number of <a href="https://open.spotify.com/listeningstats/share/4tgKHIWTjT4y1C9eMLqeIu?si=WWctd3MwQ_iZfaAQZod70A&lang=en&uri=spotify%3Alisteningstats" target="_blank">Spotify</a> <span role="img" aria-label="headphones">🎧</span> minutes, and have recently taken an interest in climbing <span role="img" aria-label="climbing">🧗</span>. Please reach out to me if you find any of these interesting, or just want to have a chat!</p>
   
-  <!-- <p class="note"> <b>[NOTE]</b> I am also actively looking for PhD positions starting Fall 2026 in the aforementioned research areas. If there are any openings and I might be a good fit for your group, do let me know!</p> -->
+  <!-- <p class="note"> <b>[NOTE]</b> I am also actively looking for PhD positions starting Fall 2026 in the aforementioned research areas. If there are any openings and I might be a good fit for your group, do let me know!</p> -->p
 </div>
 
 

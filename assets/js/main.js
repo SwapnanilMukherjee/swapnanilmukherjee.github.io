@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Dark mode toggle
+  var themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    var applyToggleLabel = function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    };
+    applyToggleLabel();
+    themeToggle.addEventListener('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      applyToggleLabel();
+    });
+  }
+
   // Mobile navigation toggle
   var nav = document.querySelector('nav');
   var toggle = nav && nav.querySelector('.nav-toggle');

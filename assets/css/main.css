@@ -7,6 +7,27 @@
   --surface: #f7f7f7;
   --primary: #111827;
   --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --nav-panel-bg: rgba(255, 255, 255, 0.95);
+  --button-bg: #ffffff;
+  --button-hover-bg: #f9fafb;
+  --footer-bg: #ffffff;
+}
+
+/* Dark theme */
+html[data-theme="dark"] {
+  --bg: #0f1115;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #2a2f3a;
+  --surface: #1a1d24;
+  --primary: #e5e7eb;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --nav-bg: rgba(15, 17, 21, 0.85);
+  --nav-panel-bg: rgba(26, 29, 36, 0.97);
+  --button-bg: #1a1d24;
+  --button-hover-bg: #242833;
+  --footer-bg: #0f1115;
 }
 
 /* Reset */
@@ -28,7 +49,7 @@ main { min-height: calc(100vh - 140px); padding: 3rem 0; }
 /* Navigation */
 nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
+  background: var(--nav-bg);
   -webkit-backdrop-filter: saturate(180%) blur(8px);
   backdrop-filter: saturate(180%) blur(8px);
   border-bottom: 1px solid var(--border);
@@ -46,6 +67,29 @@ nav a:hover, nav a.active { color: var(--text); }
 
 /* Mobile nav close button - hidden by default */
 .nav-close { display: none; }
+
+/* Theme toggle */
+.theme-toggle-item { display: flex; align-items: center; }
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.theme-toggle:hover { color: var(--text); transform: translateY(-1px); }
+.theme-toggle svg { width: 18px; height: 18px; }
+.theme-toggle .theme-icon-moon { display: none; }
+.theme-toggle .theme-icon-sun { display: block; }
+html[data-theme="dark"] .theme-toggle .theme-icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .theme-icon-moon { display: block; }
 
 /* Typography */
 h1 { font-size: 1.7rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.01em; }
@@ -71,8 +115,8 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 .social-links a:hover { color: var(--text); transform: translateY(-1px); }
 .social-links svg { width: 18px; height: 18px; }
 
-.cv-button { background: #fff; border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px; font-size: 0.95rem; text-decoration: none; color: var(--text); transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 1px 0 rgba(0,0,0,0.02); }
-.cv-button:hover { background: #f9fafb; border-color: #d1d5db; transform: translateY(-1px); }
+.cv-button { background: var(--button-bg); border: 1px solid var(--border); padding: 6px 12px; border-radius: 8px; font-size: 0.95rem; text-decoration: none; color: var(--text); transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 1px 0 rgba(0,0,0,0.02); }
+.cv-button:hover { background: var(--button-hover-bg); border-color: var(--border); transform: translateY(-1px); }
 .cv-button svg { width: 16px; height: 16px; }
 
 /* Inline icon links */
@@ -167,7 +211,7 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
 .gallery-item figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem; text-align: center; }
 
 /* Footer */
-.site-footer { border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.9rem; background: #fff; }
+.site-footer { border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.9rem; background: var(--footer-bg); }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -183,7 +227,7 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-panel-bg);
     backdrop-filter: saturate(180%) blur(8px);
     border: 1px solid var(--border);
     border-top: none;
@@ -211,7 +255,7 @@ p b, p strong { color: var(--muted) !important; font-weight: 600 !important; }
     height: 40px; 
     border: 1px solid var(--border); 
     border-radius: 8px; 
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--nav-panel-bg);
     backdrop-filter: saturate(180%) blur(8px);
     cursor: pointer; 
     font-size: 18px; 
